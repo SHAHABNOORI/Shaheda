@@ -1,0 +1,346 @@
+﻿<Window x:Class="Shaheda.SaleClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shaheda"
+        mc:Ignorable="d"
+        Title="SaleClient" Height="791.2" Width="808.2" Background="#FFA2CEFF" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources >
+        <ResourceDictionary >
+            <ImageSource x:Key="blueuser">img/blueuser.png</ImageSource>
+        </ResourceDictionary >
+    </Window.Resources >
+    <Grid Margin="0,0,3.6,0.8">
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="601" Margin="10,148,0,0" VerticalAlignment="Top" Width="778" Background="#FFE6EEF7" >
+            <TabItem Header="Basic Info " Background="#E6EEF7">
+                <Grid Background="#FFE6EEF7" Margin="0,0,-3,-3.2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="88*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="682*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblTitle" Content="Title" HorizontalAlignment="Left" Height="25" Margin="28,42,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="3"/>
+                    <GroupBox x:Name="groupBox" Header="Personal Information" HorizontalAlignment="Left" Height="260" Margin="10,10,0,0" VerticalAlignment="Top" Width="750" BorderBrush="#FF9F9F9F" FontWeight="Bold" Grid.ColumnSpan="3"/>
+                    <ComboBox x:Name="comboBoxTitle"  HorizontalAlignment="Left" Height="25" Margin="50,45,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxTitle_Loaded" Grid.Column="2">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Label x:Name="lblClientCode" Content="Client Code" HorizontalAlignment="Left" Height="25" Margin="26,90,0,0" VerticalAlignment="Top" Width="118" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name="txtclientcode" HorizontalAlignment="Left" Height="25" Margin="50,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Grid.Column="2"/>
+                    <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" Height="25" Margin="27,125,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2"/>
+                    <Label x:Name="lblSurname" Content="Surname" HorizontalAlignment="Left" Height="25" Margin="27,159,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="25" Margin="49,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Grid.Column="2"/>
+                    <TextBox x:Name="txtSurname" HorizontalAlignment="Left" Height="25" Margin="49,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Grid.Column="2"/>
+                    <Label x:Name="lblNickname" Content="Nickname" HorizontalAlignment="Left" Height="25" Margin="27,194,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="txtNickname" HorizontalAlignment="Left" Height="25" Margin="49,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Grid.Column="2"/>
+                    <Label x:Name="lblGender" Content="Gender" HorizontalAlignment="Left" Height="25" Margin="28,230,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="3"/>
+                    <ComboBox x:Name="comboBoxGender"  HorizontalAlignment="Left" Height="25" Margin="50,230,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxGender_Loaded" Grid.Column="2">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Label x:Name="lblStatus" Content="Status" HorizontalAlignment="Left" Height="25" Margin="329,230,0,0" VerticalAlignment="Top" Width="66" Grid.Column="2"/>
+                    <ComboBox x:Name="comboBoxStatus"  HorizontalAlignment="Left" Height="25" Margin="462,230,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxStatus_Loaded" Grid.Column="2">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Label x:Name="lblSexual" Content="Sexual Orientation" HorizontalAlignment="Left" Height="25" Margin="329,123,0,0" VerticalAlignment="Top" Width="116" Grid.Column="2"/>
+                    <ComboBox x:Name="comboBoxSexual"  HorizontalAlignment="Left" Height="25" Margin="462,123,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxSexual_Loaded" Grid.Column="2">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Label x:Name="lblRelation" Content="Relation" HorizontalAlignment="Left" Height="25" Margin="329,90,0,0" VerticalAlignment="Top" Width="116" Grid.Column="2"/>
+                    <Label x:Name="lblDOB" Content="D.O.B" HorizontalAlignment="Left" Height="34" Margin="329,196,0,0" VerticalAlignment="Top" Width="116" Grid.Column="2"/>
+                    <DatePicker  x:Name="dobSelector" HorizontalAlignment="Left" Height="25" Margin="462,196,0,0" VerticalAlignment="Top" Width="172" Grid.Column="2"/>
+                    <Label x:Name="lblOrigin" Content="Origin" HorizontalAlignment="Left" Height="32" Margin="329,159,0,0" VerticalAlignment="Top" Width="116" Grid.Column="2"/>
+                    <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Height="30" Margin="512,534,0,0" VerticalAlignment="Top" Width="75 " Grid.Column="2"/>
+                    <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Height="30" Margin="432,534,0,0" VerticalAlignment="Top" Width="75 " Grid.Column="2"/>
+                    <Button x:Name="btnPrint" Content="Print" HorizontalAlignment="Left" Height="30" Margin="592,534,0,0" VerticalAlignment="Top" Width="75 " Grid.Column="2"/>
+                    <Button x:Name="btnNext" Content="&gt;" HorizontalAlignment="Left" Height="30" Margin="4,535,0,0" VerticalAlignment="Top" Width="35" Grid.ColumnSpan="2" Grid.Column="1"/>
+                    <Button x:Name="btnFirst" Content="First" HorizontalAlignment="Left" Height="30" Margin="12,535,0,0" VerticalAlignment="Top" Width="35"/>
+                    <Button x:Name="btnPrevious" Content="Pre" HorizontalAlignment="Left" Height="30" Margin="52,535,0,0" VerticalAlignment="Top" Width="35"/>
+                    <Button x:Name="btnLast" Content="&gt;&gt;" HorizontalAlignment="Left" Height="30" Margin="39,535,0,0" VerticalAlignment="Top" Width="35" Grid.Column="2"/>
+                    <ComboBox x:Name="comboOrigin"  HorizontalAlignment="Left" Height="25" Margin="462,159,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboOrigin_Loaded" Grid.Column="2">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Image x:Name="image1" HorizontalAlignment="Left" Height="105" Margin="15,300,0,0" VerticalAlignment="Top" Width="95" Source="img/blueuser.png" Grid.Column="2"/>
+                    <ComboBox x:Name="comboBoxRelation"  HorizontalAlignment="Left" Height="25" Margin="462,90,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxRelation_Loaded" Grid.Column="2">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Button x:Name="btnNewClient" Content="Add New Client"  HorizontalAlignment="Left" Height="31" Margin="329,42,0,0" VerticalAlignment="Top" Width="305" Background="#FFA2CEFF" Click="BtnNewClient_Click" Grid.Column="2"/>
+                    <Button x:Name="btnUpdateClientBaseInfo" Content="Add New Client"  HorizontalAlignment="Left" Height="31" Margin="329,42,0,0" VerticalAlignment="Top" Width="305" Background="#FFA2CEFF" Click="BtnUpdateClientBaseInfo_Click" Grid.Column="2" Visibility="Hidden" IsEnabled="False"/>
+                    <GroupBox x:Name="groupBox_Copy" Header="Photo " HorizontalAlignment="Left" Height="190" Margin="10,275,0,0" VerticalAlignment="Top" Width="305" BorderBrush="#FF9F9F9F" FontWeight="Bold" Grid.ColumnSpan="3"/>
+                    <Button x:Name="btnUploadPhoto" Content="Upload Photo" HorizontalAlignment="Left" Height="31" Margin="82,410,0,0" VerticalAlignment="Top" Width="150" Background="#FFA2CEFF" Click="BtnUploadPhoto_Click" Grid.ColumnSpan="3"/>
+                    <GroupBox x:Name="groupBox_Copy1" Header="Client Category " HorizontalAlignment="Left" Height="190" Margin="314,275,0,0" VerticalAlignment="Top" Width="353" BorderBrush="#FF9F9F9F" FontWeight="Bold" Grid.Column="2"/>
+                    <Label x:Name="lblSalesman" Content="Sales man" HorizontalAlignment="Left" Height="25" Margin="329,385,0,0" VerticalAlignment="Top" Width="116" Grid.Column="2"/>
+                    <ComboBox x:Name="comboBoxSalesman"  HorizontalAlignment="Left" Height="25" Margin="462,385,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxSalesman_Loaded" Grid.Column="2">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Label x:Name="lblClientCategory" Content="Client Category" HorizontalAlignment="Left" Height="35" Margin="329,335,0,0" VerticalAlignment="Top" Width="116" Grid.Column="2"/>
+                    <ComboBox x:Name="comboBoxClientCategory" HorizontalAlignment="Left" Height="25" Margin="462,335,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxClientCategory_Loaded" Grid.Column="2">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="352,534,0,0" VerticalAlignment="Top" Width="75 " Grid.Column="2"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Contact" Background="#E6EEF7" Margin="-1.6,0">
+                <Grid Background="#E6EEF7">
+                    <GroupBox x:Name="groupBox1_Copy" Header="Contact Info " HorizontalAlignment="Left" Height="165" Margin="10,10,0,0" VerticalAlignment="Top" Width="737" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
+                    <Label x:Name="lblPhoneNumber" Content="Phone Number" HorizontalAlignment="Left" Height="25" Margin="22,42,0,0" VerticalAlignment="Top" Width="114"/>
+                    <Label x:Name="lblMobileNumber" Content="Mobile Number" HorizontalAlignment="Left" Height="25" Margin="22,75,0,0" VerticalAlignment="Top" Width="114"/>
+                    <TextBox x:Name="txtPhoneNumber" HorizontalAlignment="Left" Height="25" Margin="136,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtMobileNumber" HorizontalAlignment="Left" Height="25" Margin="136,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblOkTOContact" Content="Ok To Contact" HorizontalAlignment="Left" Height="25" Margin="404,75,0,0" VerticalAlignment="Top" Width="107"/>
+                    <ComboBox x:Name="comboBoxOKToContact"  HorizontalAlignment="Left" Height="25" Margin="522,75,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxOKToContact_Loaded">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Label x:Name="lblHomeNumber" Content="Home Number" HorizontalAlignment="Left" Height="25" Margin="22,107,0,0" VerticalAlignment="Top" Width="114"/>
+                    <Label x:Name="lblContactType" Content="Contact Type" HorizontalAlignment="Left" Height="33" Margin="404,107,0,0" VerticalAlignment="Top" Width="102"/>
+                    <TextBox x:Name="txtHomeNumber" HorizontalAlignment="Left" Height="25" Margin="136,107,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <ComboBox x:Name="comboBoxContactType"  HorizontalAlignment="Left" Height="25" Margin="522,107,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxContactType_Loaded">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <GroupBox x:Name="groupBox1_Copy1" Header="Address Info" HorizontalAlignment="Left" Height="144" Margin="10,180,0,0" VerticalAlignment="Top" Width="737" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
+                    <Label x:Name="lblAddress" Content="Address" HorizontalAlignment="Left" Height="25" Margin="22,208,0,0" VerticalAlignment="Top" Width="109"/>
+                    <Label x:Name="lblBussinesAddress" Content="Business Address" HorizontalAlignment="Left" Height="25" Margin="22,240,0,0" VerticalAlignment="Top" Width="114"/>
+                    <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="25" Margin="136,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtBussinessAddress" HorizontalAlignment="Left" Height="25" Margin="136,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblTown" Content="Town" HorizontalAlignment="Left" Height="25" Margin="22,274,0,0" VerticalAlignment="Top" Width="66"/>
+                    <ComboBox x:Name="comboBoxTown"  HorizontalAlignment="Left" Height="25" Margin="136,274,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxTown_Loaded">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Label x:Name="lblPostCode_Copy" Content="Post Code" HorizontalAlignment="Left" Height="25" Margin="404,241,0,0" VerticalAlignment="Top" Width="66"/>
+                    <TextBox x:Name="txtAddressInfoPostalCode" HorizontalAlignment="Left" Height="25" Margin="522,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblCity" Content="City" HorizontalAlignment="Left" Height="33" Margin="404,208,0,0" VerticalAlignment="Top" Width="66"/>
+                    <ComboBox x:Name="comboBoxCity"  HorizontalAlignment="Left" Height="25" Margin="522,208,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxCity_Loaded">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Label x:Name="lblDeliveryAddressName" Content="Name" HorizontalAlignment="Left" Height="25" Margin="21,364,0,0" VerticalAlignment="Top" Width="81"/>
+                    <TextBox x:Name="txtDeliveryAddressName" HorizontalAlignment="Left" Height="25" Margin="135,364,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173"/>
+                    <Label x:Name="lblDeliveryPostCode" Content="Post Code" HorizontalAlignment="Left" Height="25" Margin="21,396,0,0" VerticalAlignment="Top" Width="114"/>
+                    <TextBox x:Name="txtDeliveryPostalCode" HorizontalAlignment="Left" Height="25" Margin="135,396,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblDeliveryTown" Content="Town" HorizontalAlignment="Left" Height="25" Margin="22,429,0,0" VerticalAlignment="Top" Width="109"/>
+                    <GroupBox x:Name="groupBox1_Copy2" Header="Delivery Address " HorizontalAlignment="Left" Height="137" Margin="10,334,0,0" VerticalAlignment="Top" Width="737" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
+                    <Label x:Name="lblwebsite" Content="Website" HorizontalAlignment="Left" Height="25" Margin="22,140,0,0" VerticalAlignment="Top" Width="109"/>
+                    <TextBox x:Name="txtWebsite" HorizontalAlignment="Left" Height="25" Margin="136,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblEmailAddress" Content="Email Address" HorizontalAlignment="Left" Height="25" Margin="404,42,0,0" VerticalAlignment="Top" Width="107"/>
+                    <TextBox x:Name="txtEmailAdrress" HorizontalAlignment="Left" Height="25" Margin="522,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtDeliveryAddressTown" HorizontalAlignment="Left" Height="25" Margin="136,429,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblDeliveryAddresscity" Content="City" HorizontalAlignment="Left" Height="32" Margin="407,364,0,0" VerticalAlignment="Top" Width="81"/>
+                    <TextBox x:Name="txtDeliveryAddressCity" HorizontalAlignment="Left" Height="25" Margin="521,364,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173"/>
+                    <Label x:Name="lblEmergencyAddress" Content="Address" HorizontalAlignment="Left" Height="25" Margin="407,396,0,0" VerticalAlignment="Top" Width="114"/>
+                    <TextBox x:Name="txtEmergencyAddress" HorizontalAlignment="Left" Height="25" Margin="521,396,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblDeliveryAddressPhoneNumber" Content="Phone Number" HorizontalAlignment="Left" Height="25" Margin="408,429,0,0" VerticalAlignment="Top" Width="109"/>
+                    <TextBox x:Name="txtDeliveryAddressPhoneNumber" HorizontalAlignment="Left" Height="25" Margin="522,429,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblSituation_Copy" Content="Client Contact Info" HorizontalAlignment="Left" Height="35" Margin="15,485,0,0" VerticalAlignment="Top" Width="116"/>
+
+                    <Button x:Name="btnAddClientContactInfo" Content="Add Client Contact Info" HorizontalAlignment="Left" Height="25" Margin="141,485,0,0" VerticalAlignment="Top" Width="172" Background="#FFA2CEFF" Click="BtnAddClientContactInfo_Click"/>
+                    <Button x:Name="btnUpdateClientContactInfo" Content="Update Client Contact Info" HorizontalAlignment="Left" Height="25" Margin="141,485,0,0" VerticalAlignment="Top" Width="172" Background="#FFA2CEFF" Click="BtnUpdateClientContactInfo_Click" IsEnabled="False" Visibility="Hidden"/>
+                   
+                    <Button x:Name="btnSave_Copy" Content="Save" HorizontalAlignment="Left" Height="30" Margin="605,534,0,0" VerticalAlignment="Top" Width="75 "/>
+                    <Button x:Name="btnEdit_Copy" Content="Edit" HorizontalAlignment="Left" Height="30" Margin="525,534,0,0" VerticalAlignment="Top" Width="75 "/>
+                    <Button x:Name="btnPrint_Copy" Content="Print" HorizontalAlignment="Left" Height="30" Margin="685,534,0,0" VerticalAlignment="Top" Width="75 "/>
+                    <Button x:Name="btnNext_Copy" Content="&gt;" HorizontalAlignment="Left" Height="30" Margin="92,535,0,0" VerticalAlignment="Top" Width="35"/>
+                    <Button x:Name="btnFirst_Copy" Content="First" HorizontalAlignment="Left" Height="30" Margin="12,535,0,0" VerticalAlignment="Top" Width="35"/>
+                    <Button x:Name="btnPrevious_Copy" Content="Pre" HorizontalAlignment="Left" Height="30" Margin="52,535,0,0" VerticalAlignment="Top" Width="35"/>
+                    <Button x:Name="btnLast_Copy" Content="&gt;&gt;" HorizontalAlignment="Left" Height="30" Margin="132,535,0,0" VerticalAlignment="Top" Width="35"/>
+                    <Button x:Name="btnDelete_Copy" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="445,534,0,0" VerticalAlignment="Top" Width="75 "/>
+                </Grid>
+            </TabItem>
+
+
+            <TabItem Header="Purchase Information" Background="#E6EEF7" >
+                <Grid Background="#E6EEF7" Margin="0,-1,0,1.8">
+                    <GroupBox x:Name="groupBox2" Header="Purchase Information " HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" VerticalAlignment="Top" Width="747" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
+                    <Label x:Name="lblBalance" Content="Balance" HorizontalAlignment="Left" Height="25" Margin="21,38,0,0" VerticalAlignment="Top" Width="128"/>
+                    <TextBox x:Name="txtBalance" HorizontalAlignment="Left" Height="25" Margin="149,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblCredit" Content="Credit" HorizontalAlignment="Left" Height="35" Margin="21,70,0,0" VerticalAlignment="Top" Width="131"/>
+                    <Label x:Name="lblDiscount" Content="Discount" HorizontalAlignment="Left" Height="35" Margin="19,103,0,0" VerticalAlignment="Top" Width="131"/>
+                    <Label x:Name="lblPurchasePaymentMethod" Content="Payment Method" HorizontalAlignment="Left" Height="35" Margin="403,38,0,0" VerticalAlignment="Top" Width="131"/>
+                    <Label x:Name="lblPricing" Content="Pricing" HorizontalAlignment="Left" Height="27" Margin="406,103,0,0" VerticalAlignment="Top" Width="131"/>
+                    <Label x:Name="lblPaymentTerms" Content="Payment Terms" HorizontalAlignment="Left" Height="33" Margin="403,70,0,0" VerticalAlignment="Top" Width="125"/>
+                    <TextBox x:Name="txtPaymentTerms" HorizontalAlignment="Left" Height="25" Margin="547,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblVAT" Content="VAT" HorizontalAlignment="Left" Height="25" Margin="21,135,0,0" VerticalAlignment="Top" Width="143"/>
+                    <GroupBox x:Name="groupBox2_Copy" Header="Extra Information " HorizontalAlignment="Left" Height="101" Margin="10,174,0,0" VerticalAlignment="Top" Width="747" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
+                    <Label x:Name="lblPurchaseName" Content="Name" HorizontalAlignment="Left" Height="32" Margin="19,232,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label x:Name="lblReferralBy" Content="Referral By" HorizontalAlignment="Left" Height="32" Margin="19,372,0,0" VerticalAlignment="Top" Width="125"/>
+                    <ComboBox x:Name="comboReferralFor"  HorizontalAlignment="Left" Height="25" Margin="149,408,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboReferralFor_Loaded">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+
+                    </ComboBox>
+                    <Label x:Name="lblFullName" Content="Name" HorizontalAlignment="Left" Height="32" Margin="19,302,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label x:Name="lblDateOfReferral" Content="Date Of Referral" HorizontalAlignment="Left" Height="25" Margin="19,337,0,0" VerticalAlignment="Top" Width="125"/>
+                    <ComboBox x:Name="DateOfReferral"  HorizontalAlignment="Left" Height="25" Margin="149,337,0,0" VerticalAlignment="Top" Width="172">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                        <ComboBoxItem Content="Active" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+                        <ComboBoxItem Content="Deactive" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+
+                    </ComboBox>
+                    <ComboBox x:Name="ReferralBy"  HorizontalAlignment="Left" Height="25" Margin="149,372,0,0" VerticalAlignment="Top" Width="172">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                        <ComboBoxItem Content="Active" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+                        <ComboBoxItem Content="Deactive" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+
+                    </ComboBox>
+                    <Label x:Name="lblNTK" Content="NTK" HorizontalAlignment="Left" Height="25" Margin="19,198,0,0" VerticalAlignment="Top" Width="125"/>
+                    <TextBox x:Name="txtExtraInformationNtk" HorizontalAlignment="Left" Height="25" Margin="149,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblReferralFor" Content="Refferal For" HorizontalAlignment="Left" Height="32" Margin="21,408,0,0" VerticalAlignment="Top" Width="102"/>
+                    <Label x:Name="lblRefferalTel" Content="Refferal Tel" HorizontalAlignment="Left" Height="32" Margin="21,445,0,0" VerticalAlignment="Top" Width="120"/>
+                    <GroupBox x:Name="groupBox_Copy3" Header="Payment" HorizontalAlignment="Left" Height="236" Margin="10,280,0,-20" VerticalAlignment="Top" Width="747" BorderBrush="#FF9F9F9F" FontWeight="Bold" d:IsLocked="True"/>
+                    <TextBox x:Name="txtDiscount" HorizontalAlignment="Left" Height="25" Margin="149,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtCredit" HorizontalAlignment="Left" Height="25" Margin="149,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtPurchasePaymentMethod" HorizontalAlignment="Left" Height="25" Margin="547,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtVAT" HorizontalAlignment="Left" Height="25" Margin="149,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtPricing" HorizontalAlignment="Left" Height="25" Margin="547,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtExtraInformationName" HorizontalAlignment="Left" Height="25" Margin="149,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblRelationship" Content="Relationship" HorizontalAlignment="Left" Height="32" Margin="403,232,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label x:Name="lblContactNumber" Content="Contact Number" HorizontalAlignment="Left" Height="25" Margin="403,198,0,0" VerticalAlignment="Top" Width="125"/>
+                    <TextBox x:Name="txtExtraInformationContactNumber" HorizontalAlignment="Left" Height="25" Margin="547,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtExtraInformationRelationship" HorizontalAlignment="Left" Height="25" Margin="547,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtFullName" HorizontalAlignment="Left" Height="25" Margin="149,302,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtPaymentRefferalTel" HorizontalAlignment="Left" Height="25" Margin="149,445,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblReferralBy_Copy" Content="Referral By" HorizontalAlignment="Left" Height="32" Margin="19,372,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label x:Name="lblDateOfReferral_Copy" Content="Date Of Referral" HorizontalAlignment="Left" Height="25" Margin="19,337,0,0" VerticalAlignment="Top" Width="125"/>
+                    <DatePicker  x:Name="dateOfReferralSelector" HorizontalAlignment="Left" Height="25" Margin="149,337,0,0" VerticalAlignment="Top" Width="172" Grid.Column="2"/>
+                    <ComboBox x:Name="comboReferralBy"  HorizontalAlignment="Left" Height="25" Margin="149,372,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboReferralBy_Loaded">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+
+                    </ComboBox>
+                    <Label x:Name="lblReferralFor_Copy" Content="Refferal For" HorizontalAlignment="Left" Height="32" Margin="21,408,0,0" VerticalAlignment="Top" Width="102"/>
+                    <Label x:Name="lblRefferalTel_Copy" Content="Refferal Tel" HorizontalAlignment="Left" Height="32" Margin="21,445,0,0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="txtPaymetnName" HorizontalAlignment="Left" Height="25" Margin="149,302,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <ComboBox x:Name="comboOtherRequirements"  HorizontalAlignment="Left" Height="25" Margin="547,445,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboOtherRequirements_Loaded">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+
+                    </ComboBox>
+                    <Button x:Name="btnAddClientPurchaceInfo" Content="Add Client Purchace Info" HorizontalAlignment="Left" Height="25" Margin="547,480,0,0" VerticalAlignment="Top" Width="172" Background="#FFA2CEFF" Click="BtnAddClientPurchaceInfo_Click"/>
+                    <Button x:Name="btnUpdateClientPurchaceInfo" Content="Update Client Contact Info" HorizontalAlignment="Left" Height="25" Margin="547,480,0,0" VerticalAlignment="Top" Width="172" Background="#FFA2CEFF" Click="BtnUpdateClientPurchaseInfo_Click" IsEnabled="False" Visibility="Hidden"/>
+                    <TextBox x:Name="txtPaymentGPsNumber" HorizontalAlignment="Left" Height="25" Margin="547,373,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblGPsName" Content="GP's Name" HorizontalAlignment="Left" Height="32" Margin="417,337,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label x:Name="lblReasonForReferral" Content="Reason For Referral" HorizontalAlignment="Left" Height="32" Margin="19,478,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label x:Name="lblTherapist" Content="Therapist" HorizontalAlignment="Left" Height="25" Margin="417,302,0,0" VerticalAlignment="Top" Width="125"/>
+                    <ComboBox x:Name="comboTraphist"  HorizontalAlignment="Left" Height="25" Margin="547,302,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboTraphist_Loaded">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+
+                    </ComboBox>
+                    <ComboBox x:Name="comboGpsName"  HorizontalAlignment="Left" Height="25" Margin="547,337,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboGpsName_Loaded">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+
+                    </ComboBox>
+                    <Label x:Name="lblGPsNumber" Content="GP's Number" HorizontalAlignment="Left" Height="32" Margin="419,373,0,0" VerticalAlignment="Top" Width="102"/>
+                    <Label x:Name="lblGPsAddress" Content="GP's Address" HorizontalAlignment="Left" Height="32" Margin="419,410,0,0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="txtPaymentReasonForReferral" HorizontalAlignment="Left" Height="25" Margin="149,478,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtPaymentGPsAddress" HorizontalAlignment="Left" Height="25" Margin="547,410,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <Label x:Name="lblOtherRequirements" Content="Other Requirements" HorizontalAlignment="Left" Height="32" Margin="414,445,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="btnSave_Copy1" Content="Save" HorizontalAlignment="Left" Height="30" Margin="605,534,0,0" VerticalAlignment="Top" Width="75 "/>
+                    <Button x:Name="btnEdit_Copy1" Content="Edit" HorizontalAlignment="Left" Height="30" Margin="525,534,0,0" VerticalAlignment="Top" Width="75 "/>
+                    <Button x:Name="btnPrint_Copy1" Content="Print" HorizontalAlignment="Left" Height="30" Margin="685,534,0,0" VerticalAlignment="Top" Width="75 "/>
+                    <Button x:Name="btnNext_Copy1" Content="&gt;" HorizontalAlignment="Left" Height="30" Margin="92,535,0,0" VerticalAlignment="Top" Width="35"/>
+                    <Button x:Name="btnFirst_Copy1" Content="First" HorizontalAlignment="Left" Height="30" Margin="12,535,0,0" VerticalAlignment="Top" Width="35"/>
+                    <Button x:Name="btnPrevious_Copy1" Content="Pre" HorizontalAlignment="Left" Height="30" Margin="52,535,0,0" VerticalAlignment="Top" Width="35"/>
+                    <Button x:Name="btnLast_Copy1" Content="&gt;&gt;" HorizontalAlignment="Left" Height="30" Margin="132,535,0,0" VerticalAlignment="Top" Width="35"/>
+                    <Button x:Name="btnDelete_Copy1" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="445,534,0,0" VerticalAlignment="Top" Width="75 "/>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="90" Margin="30,20,0,0" VerticalAlignment="Top" Width="90" Source="img/blueuser.png"/>
+        <Label x:Name="lblClientCodeFilter" Content="Code" HorizontalAlignment="Left" Height="30" Margin="138,55,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="txtClientCodeFilter" HorizontalAlignment="Left" Height="30" Margin="200,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170"/>
+        <Button x:Name="btnFilterClient" Content="Filter" HorizontalAlignment="Left" Height="30" Margin="380,55,0,0" VerticalAlignment="Top" Width="75 " Click="BtnFilterClicent_Click"/>
+        <Button x:Name="btnClearForm" Content="Clear Form" HorizontalAlignment="Left" Height="30" Margin="475,55,0,0" VerticalAlignment="Top" Width="75 " Click="BtnClearForm_Click" IsEnabled="False"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="110" Margin="10,10,0,0" VerticalAlignment="Top" Width="773" CornerRadius="8"/>
+
+    </Grid>
+</Window>

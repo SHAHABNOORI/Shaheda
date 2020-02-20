@@ -1,0 +1,267 @@
+﻿<Window x:Class="Shaheda.Premission"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shaheda"
+        mc:Ignorable="d"
+        Title="Premission" Height="846.312" Width="818.2" Background="#FF2E86C1" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <GroupBox x:Name="groupBox_Copy1" Header="Permission access" HorizontalAlignment="Left" Height="211" Margin="10,10,0,0" VerticalAlignment="Top" Width="790" BorderBrush="#FFA8A8A8" FontWeight="Bold" d:IsLocked="True"/>
+        <Label x:Name="lblSurname" Content="Surname" HorizontalAlignment="Left" Height="35" Margin="36,35,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="lblPersonalNumber" Content="Personal Number" HorizontalAlignment="Left" Height="35" Margin="456,156,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="txtPersonalNumber" HorizontalAlignment="Left" Height="25" Margin="595,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+        <ComboBox x:Name="comboBoxSurname"  HorizontalAlignment="Left" Height="25" Margin="175,35,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" Height="35" Margin="36,126,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="lblAccessLevel" Content="Access level" HorizontalAlignment="Left" Height="35" Margin="36,95,0,0" VerticalAlignment="Top" Width="85"/>
+        <ComboBox x:Name="comboBoxAlarm_Copy1"  HorizontalAlignment="Left" Height="25" Margin="175,95,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <Label x:Name="lblStatus" Content="Status" HorizontalAlignment="Left" Height="35" Margin="36,65,0,0" VerticalAlignment="Top" Width="85"/>
+        <ComboBox x:Name="comboBoxAlarm_Copy2"  HorizontalAlignment="Left" Height="25" Margin="175,65,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <Label x:Name="lblNickname" Content="Nickname" HorizontalAlignment="Left" Height="35" Margin="456,126,0,0" VerticalAlignment="Top" Width="85"/>
+        <TextBox x:Name="txtTitle" HorizontalAlignment="Left" Height="25" Margin="175,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+        <TextBox x:Name="txtNickname" HorizontalAlignment="Left" Height="25" Margin="595,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="25" Margin="175,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+        <Label x:Name="lblGender" Content="Gender" HorizontalAlignment="Left" Height="35" Margin="36,156,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label x:Name="lblTitle" Content="Title" HorizontalAlignment="Left" Height="35" Margin="36,186,0,0" VerticalAlignment="Top" Width="130"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="85" Margin="646,35,0,0" VerticalAlignment="Top" Width="70" Source="img/blue user.png"/>
+        <ComboBox x:Name="comboBoxSurname_Copy"  HorizontalAlignment="Left" Height="25" Margin="175,156,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <GroupBox x:Name="groupBox_Copy2" Header="Access level" HorizontalAlignment="Left" Height="584" Margin="10,226,0,0" VerticalAlignment="Top" Width="790" BorderBrush="#FFA8A8A8" FontWeight="Bold"/>
+        <Label x:Name="lblTreatmentPage" Content="Treatment Page" HorizontalAlignment="Left" Height="35" Margin="42,607,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label x:Name="lblResetAllData" Content="Reset all data" HorizontalAlignment="Left" Height="35" Margin="42,487,0,0" VerticalAlignment="Top" Width="139"/>
+        <Label x:Name="lblImportData" Content="Import data" HorizontalAlignment="Left" Height="35" Margin="42,367,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="lblMainSetting" Content="Main setting" HorizontalAlignment="Left" Height="35" Margin="42,336,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="lblBusinessProfile" Content="Business profile" HorizontalAlignment="Left" Height="35" Margin="42,306,0,0" VerticalAlignment="Top" Width="134"/>
+        <Label x:Name="lblRestoreData" Content="Restore data" HorizontalAlignment="Left" Height="35" Margin="42,457,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label x:Name="lblExportData" Content="Export data" HorizontalAlignment="Left" Height="35" Margin="42,397,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label x:Name="lblBackupData" Content="Back up data" HorizontalAlignment="Left" Height="35" Margin="42,427,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label x:Name="lblPassword" Content="Password" HorizontalAlignment="Left" Height="35" Margin="42,576,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label x:Name="lblPrintSetting" Content="Print setting" HorizontalAlignment="Left" Height="35" Margin="42,546,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label x:Name="lblDoc" Content="Doc / Ref Numbers" HorizontalAlignment="Left" Height="35" Margin="42,516,0,0" VerticalAlignment="Top" Width="139"/>
+        <ComboBox x:Name="comboBoxTreatmentPage"  HorizontalAlignment="Left" Height="25" Margin="181,607,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <ComboBox x:Name="comboBoxMainSetting"  HorizontalAlignment="Left" Height="25" Margin="181,336,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <ComboBox x:Name="comboBoxBusinessProfile"  HorizontalAlignment="Left" Height="25" Margin="181,306,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <ComboBox x:Name="comboBoxExportData"  HorizontalAlignment="Left" Height="25" Margin="181,397,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <ComboBox x:Name="comboBoxImportData"  HorizontalAlignment="Left" Height="25" Margin="181,367,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <ComboBox x:Name="comboBoxBackupData"  HorizontalAlignment="Left" Height="25" Margin="181,427,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <ComboBox x:Name="comboBoxResetAllData"  HorizontalAlignment="Left" Height="25" Margin="181,487,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <ComboBox x:Name="comboBoxRestoreData"  HorizontalAlignment="Left" Height="25" Margin="181,457,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <ComboBox x:Name="comboBoxPrintSetting"  HorizontalAlignment="Left" Height="25" Margin="181,547,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <ComboBox x:Name="comboBoxDoc"  HorizontalAlignment="Left" Height="25" Margin="181,517,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <ComboBox x:Name="comboBoxPassword"  HorizontalAlignment="Left" Height="25" Margin="181,577,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <CheckBox x:Name="checkBoxBusinessProfile4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,306,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <TextBox x:Name="txtFullAccess" HorizontalAlignment="Left" Height="25" Margin="461,267,0,0" TextWrapping="Wrap" Text="Full access" VerticalAlignment="Top" Width="65" BorderBrush="Black" Background="#FF62FFBE" TextAlignment="Center" IsReadOnly="True"/>
+        <TextBox x:Name="txtaccess4" HorizontalAlignment="Left" Height="25" Margin="656,267,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="60" BorderBrush="Black" Background="#FF62FFBE" TextAlignment="Center" IsReadOnly="True"/>
+        <TextBox x:Name="txtaccess3" HorizontalAlignment="Left" Height="25" Margin="591,267,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="65" BorderBrush="Black" Background="#FF62FFBE" TextAlignment="Center" IsReadOnly="True"/>
+        <TextBox x:Name="txtaccess2" HorizontalAlignment="Left" Height="25" Margin="526,267,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="65" BorderBrush="Black" Background="#FF62FFBE" TextAlignment="Center" IsReadOnly="True"/>
+        <CheckBox x:Name="checkBoxBusinessProfileFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,306,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxTreatmentPage4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,607,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxBusinessProfile3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,306,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxBusinessProfile2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,306,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <CheckBox x:Name="checkBoxTreatmentPageFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,607,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxPassword4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,577,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxTreatmentPage3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,607,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxTreatmentPage2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,607,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <CheckBox x:Name="checkBoxPasswordFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,577,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxPrintSetting4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,547,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxPassword3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,577,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxPassword2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,577,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <CheckBox x:Name="checkBoxPrintSettingFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,547,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxDoc4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,517,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxPrintSetting3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,547,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxPrintSetting2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,547,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <CheckBox x:Name="checkBoxDocFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,517,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxResetAllData4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,487,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxDoc3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,517,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxDoc2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,517,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <CheckBox x:Name="checkBoxResetAllDataFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,487,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxRestoreData4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,457,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxResetAllData3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,487,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxResetAllData2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,487,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <CheckBox x:Name="checkBoxRestoreDataFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,457,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxDataEntry_Copy28" Content="" HorizontalAlignment="Left" Height="25" Margin="692,379,0,0" VerticalAlignment="Top" Width="0" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxRestoreData3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,457,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxRestoreData2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,457,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <CheckBox x:Name="checkBoxBackupDataFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,427,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxBackupData4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,427,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxBackupData3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,427,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxBackupData2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,427,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <CheckBox x:Name="checkBoxExportDataFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,397,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxExportData4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,397,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxExportData3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,397,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxExportData2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,397,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <CheckBox x:Name="checkBoxImportDataFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,367,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxImportData4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,367,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxImportData3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,367,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxImportData2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,367,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <CheckBox x:Name="checkBoxMainSettingFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,336,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxMainSetting4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,336,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxMainSetting3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,336,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxMainSetting2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,336,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <Label x:Name="lblAdministrative" Content="Administrative" HorizontalAlignment="Left" Height="35" Margin="42,665,0,0" VerticalAlignment="Top" Width="130"/>
+        <ComboBox x:Name="comboBoxAdministrative"  HorizontalAlignment="Left" Height="25" Margin="181,665,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <Label x:Name="lblTherapist" Content="Therapist" HorizontalAlignment="Left" Height="35" Margin="42,730,0,0" VerticalAlignment="Top" Width="130"/>
+        <ComboBox x:Name="comboBoxTherapist"  HorizontalAlignment="Left" Height="25" Margin="181,730,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <Label x:Name="lblReports" Content="Reports" HorizontalAlignment="Left" Height="35" Margin="42,760,0,0" VerticalAlignment="Top" Width="130"/>
+        <ComboBox x:Name="comboBoxReports"  HorizontalAlignment="Left" Height="25" Margin="181,760,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <CheckBox x:Name="checkBoxReports4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,760,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxReportsFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,760,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxTherapist4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,730,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxReports3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,760,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxReports2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,760,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <CheckBox x:Name="checkBoxTherapistFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,730,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxAdministrative4" Content="" HorizontalAlignment="Left" Height="25" Margin="681,665,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.565,2.448"/>
+        <CheckBox x:Name="checkBoxTherapist3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,730,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxTherapist2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,730,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <CheckBox x:Name="checkBoxAdministrativeFull" Content="" HorizontalAlignment="Left" Height="25" Margin="486,665,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.459,0.632" IsChecked="True"/>
+        <CheckBox x:Name="checkBoxAdministrative3" Content="" HorizontalAlignment="Left" Height="25" Margin="616,665,0,0" VerticalAlignment="Top" Width="17"/>
+        <CheckBox x:Name="checkBoxAdministrative2" Content="" HorizontalAlignment="Left" Height="25" Margin="549,665,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.565,0.448"/>
+        <GroupBox x:Name="groupBox_Copy4" Header="Setting" HorizontalAlignment="Left" Height="389" Margin="25,250,0,0" VerticalAlignment="Top" Width="730" BorderBrush="#FF9C9B95" FontWeight="Bold" d:IsLocked="True"/>
+        <GroupBox x:Name="groupBox_Copy5" Header="Administrative" HorizontalAlignment="Left" Height="70" Margin="25,639,0,0" VerticalAlignment="Top" Width="730" BorderBrush="#FFA8A8A8" FontWeight="Bold" d:IsLocked="True"/>
+        <GroupBox x:Name="groupBox_Copy6" Header="Client" HorizontalAlignment="Left" Height="88" Margin="25,709,0,0" VerticalAlignment="Top" Width="730" BorderBrush="#FFA8A8A8" FontWeight="Bold" d:IsLocked="True"/>
+
+    </Grid>
+</Window>

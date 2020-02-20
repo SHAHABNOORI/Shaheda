@@ -1,0 +1,130 @@
+﻿<Window x:Class="Shaheda.SettingReminder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shaheda"
+        mc:Ignorable="d"
+        Title="Reminder" Height="531.4" Width="778" Background="#FFA2CEFF" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <GroupBox x:Name="groupBox" Header="Reminder Info " HorizontalAlignment="Left" Height="185" Margin="10,10,0,0" VerticalAlignment="Top" Width="750" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
+        <Label x:Name="lblCategory" Content="Category" HorizontalAlignment="Left" Height="35" Margin="28,85,0,0" VerticalAlignment="Top" Width="72"/>
+        <ComboBox x:Name="comboBoxCategory"  HorizontalAlignment="Left" Height="25" Margin="163,85,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="anniversary" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="birthday" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="important" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="business" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="must attend" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="need preparation" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="personal" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="phone call" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="vacation" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="send message" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="exam" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="meeting" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+        </ComboBox>
+        <Label x:Name="lblTypeOfReminder" Content="Type of reminder" HorizontalAlignment="Left" Height="30" Margin="28,45,0,0" VerticalAlignment="Top" Width="122"/>
+        <ComboBox x:Name="comboBoxTypeOfReminder"  HorizontalAlignment="Left" Height="25" Margin="163,45,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="task" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="event" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="message" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+        </ComboBox>
+        <Label x:Name="lblPriority" Content="Priority" HorizontalAlignment="Left" Height="35" Margin="28,125,0,0" VerticalAlignment="Top" Width="72"/>
+        <ComboBox x:Name="comboBoxPriority"  HorizontalAlignment="Left" Height="25" Margin="163,125,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="None" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="Low" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="Medium" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="High" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+        </ComboBox>
+        <Label x:Name="lblSignificance" Content="Significance" HorizontalAlignment="Left" Height="35" Margin="418,85,0,0" VerticalAlignment="Top" Width="72"/>
+        <ComboBox x:Name="comboBoxSignificance"  HorizontalAlignment="Left" Height="25" Margin="553,85,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="Necessary" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="Immediate" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="Very urgently" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="Important" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+        </ComboBox>
+        <Label x:Name="lblUrgent" Content="Urgent" HorizontalAlignment="Left" Height="35" Margin="418,125,0,0" VerticalAlignment="Top" Width="72"/>
+        <ComboBox x:Name="comboBoxUrgent"  HorizontalAlignment="Left" Height="25" Margin="553,125,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="0" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="1" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="2" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
+            <ComboBoxItem Content="3" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
+        </ComboBox>
+        <Button x:Name="btnNewCategory" Content="Add New Category"  HorizontalAlignment="Left" Height="31" Margin="422,42,0,0" VerticalAlignment="Top" Width="305" Background="#FFD7D7D7"/>
+        <GroupBox x:Name="groupBox_Copy" Header="Alarm Info " HorizontalAlignment="Left" Height="150" Margin="11,200,0,0" VerticalAlignment="Top" Width="750" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
+        <Label x:Name="lblDate" Content="Date" HorizontalAlignment="Left" Height="34" Margin="422,263,0,0" VerticalAlignment="Top" Width="116"/>
+        <DatePicker x:Name="datapickerdate" HorizontalAlignment="Left" Height="25" Margin="555,263,0,0" VerticalAlignment="Top" Width="172"/>
+        <Label x:Name="lblTime" Content="Time" HorizontalAlignment="Left" Height="32" Margin="30,263,0,0" VerticalAlignment="Top" Width="116"/>
+        <ComboBox x:Name="comboTime"  HorizontalAlignment="Left" Height="25" Margin="163,263,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <RadioButton x:Name="radioButtonActive" Content="Active" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="162,231,0,0" Width="103" Height="20"/>
+        <RadioButton x:Name="radioButtonDeActive" Content="Deactive" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="270,231,0,0" Width="130" Height="20"/>
+        <Label x:Name="lblstatus" Content="Status" HorizontalAlignment="Left" Height="32" Margin="31,226,0,0" VerticalAlignment="Top" Width="116"/>
+        <Label x:Name="lblRecurrencePattern" Content="Recurrence pattern" HorizontalAlignment="Left" Height="35" Margin="30,305,0,0" VerticalAlignment="Top" Width="128"/>
+        <ComboBox x:Name="comboxRecurrencePattern"  HorizontalAlignment="Left" Height="25" Margin="163,305,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <Label x:Name="lblRepeated" Content="Repeated" HorizontalAlignment="Left" Height="35" Margin="422,305,0,0" VerticalAlignment="Top" Width="128"/>
+        <ComboBox x:Name="comboxRepeated"  HorizontalAlignment="Left" Height="25" Margin="555,305,0,0" VerticalAlignment="Top" Width="172">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+
+        </ComboBox>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Height="30" Margin="605,462,0,0" VerticalAlignment="Top" Width="75 "/>
+        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Height="30" Margin="525,462,0,0" VerticalAlignment="Top" Width="75 "/>
+        <Button x:Name="btnPrint" Content="Print" HorizontalAlignment="Left" Height="30" Margin="685,462,0,0" VerticalAlignment="Top" Width="75 "/>
+        <Button x:Name="btnNext" Content="&gt;" HorizontalAlignment="Left" Height="30" Margin="90,462,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button x:Name="btnFirst" Content="First" HorizontalAlignment="Left" Height="30" Margin="10,462,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button x:Name="btnPrevious" Content="Pre" HorizontalAlignment="Left" Height="30" Margin="50,462,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button x:Name="btnLast" Content="&gt;&gt;" HorizontalAlignment="Left" Height="30" Margin="130,462,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="445,462,0,0" VerticalAlignment="Top" Width="75 "/>
+
+    </Grid>
+</Window>

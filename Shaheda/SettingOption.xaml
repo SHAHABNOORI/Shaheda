@@ -1,0 +1,36 @@
+﻿<Window x:Class="Shaheda.SettingOption"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shaheda"
+        mc:Ignorable="d"
+        Title="Option" Height="646.4" Width="778.2" Background="#FFA2CEFF" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <GroupBox x:Name="groupBox_Copy" Header="Import data " HorizontalAlignment="Left" Height="130" Margin="10,10,0,0" VerticalAlignment="Top" Width="750" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
+        <Button x:Name="btnbrowse" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="30,95,0,0" Height="30"/>
+        <Button x:Name="btnReviewImport" Content="Review" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="118,95,0,0" Height="30"/>
+        <ProgressBar x:Name="progressbarImport" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="710" Margin="30,48,0,0" Background="White" Foreground="#FFABABAB"/>
+        <GroupBox x:Name="groupBox_Copy1" Header="Export data " HorizontalAlignment="Left" Height="130" Margin="10,155,0,0" VerticalAlignment="Top" Width="750" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
+        <Button x:Name="btnToButton" Content="To button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="30,240,0,0" Height="30"/>
+        <Button x:Name="btnReviewExport" Content="Review" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="118,240,0,0" Height="30"/>
+        <ProgressBar x:Name="progressbarExport" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="710" Margin="30,193,0,0" Background="White" Foreground="#FFABABAB"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="14,572,0,0" Height="30"/>
+        <Button x:Name="btnIBS" Content="About" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="278,572,0,0" Height="30"/>
+        <Button x:Name="btnReset" Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="190,572,0,0" Height="30"/>
+        <Button x:Name="btnRestoreData" Content="Restore" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="102,572,0,0" Height="30"/>
+        <GroupBox x:Name="groupBox_Copy2" Header="API " HorizontalAlignment="Left" Height="155" Margin="10,300,0,0" VerticalAlignment="Top" Width="750" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
+        <Button x:Name="btnConnet" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="30,410,0,0" Height="30"/>
+        <Button x:Name="btnTestConnection" Content="Test" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="118,410,0,0" Height="30"/>
+        <Label x:Name="lblSolution" Content="Solution Name" HorizontalAlignment="Left" Height="25" Margin="31,327,0,0" VerticalAlignment="Top" Width="129"/>
+        <Label x:Name="lblWebApi" Content="Web API" HorizontalAlignment="Left" Height="25" Margin="31,366,0,0" VerticalAlignment="Top" Width="129"/>
+        <TextBox x:Name="txtContentAddress" HorizontalAlignment="Left" Height="25" Margin="160,327,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="580"/>
+        <TextBox x:Name="txtContentSurnametext" HorizontalAlignment="Left" Height="25" Margin="160,367,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="580"/>
+        <GroupBox x:Name="groupBox_Copy3" Header="Backup " HorizontalAlignment="Left" Height="104" Margin="10,461,0,0" VerticalAlignment="Top" Width="750" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
+        <RadioButton x:Name="radioButtonAutomatic" Content="Automatic" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="27,485,0,0" Width="128" Height="20"/>
+        <RadioButton x:Name="radioButtonManual" Content="Manual" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,485,0,0" Width="130" Height="20"/>
+        <Label x:Name="lblBackupShedule" Content="Backup shedule" HorizontalAlignment="Left" Height="35" Margin="27,520,0,0" VerticalAlignment="Top" Width="133"/>
+        <DatePicker x:Name="datapickerBackup" HorizontalAlignment="Left" Height="25" Margin="160,520,0,0" VerticalAlignment="Top" Width="172"/>
+
+    </Grid>
+</Window>
