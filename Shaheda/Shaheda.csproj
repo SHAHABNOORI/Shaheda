@@ -77,11 +77,13 @@
     <Compile Include="Commands\Modules\Clients\ClientDeliveryAddressCommand.cs" />
     <Compile Include="Commands\Modules\Clients\ClientExtraInformationCommand.cs" />
     <Compile Include="Commands\Modules\Clients\ClientPaymentCommand.cs" />
-    <Compile Include="Commands\Modules\Clients\ClientPurchaceInformationCommand.cs" />
+    <Compile Include="Commands\Modules\Clients\ClientPurchaceInfoCommand.cs" />
     <Compile Include="Commands\Modules\Clients\CreateClientBaseInfoCommand.cs" />
     <Compile Include="Commands\Modules\Clients\CreateClientContactInfoCommand.cs" />
-    <Compile Include="Commands\Modules\Clients\CreateClientPurchaceInformationCommand.cs" />
+    <Compile Include="Commands\Modules\Clients\CreateClientPurchaceInfoCommand.cs" />
     <Compile Include="Commands\Modules\Clients\UpdateClientBaseInfoCommand.cs" />
+    <Compile Include="Commands\Modules\Clients\UpdateClientContactInfoCommand.cs" />
+    <Compile Include="Commands\Modules\Clients\UpdateClientPurchaceInfoCommand.cs" />
     <Compile Include="Commands\Modules\Languages\CreateLanguageCommand.cs" />
     <Compile Include="Commands\Modules\Languages\UpdateLanguageCommand.cs" />
     <Compile Include="Commands\Modules\Origins\CreateOriginCommand.cs" />

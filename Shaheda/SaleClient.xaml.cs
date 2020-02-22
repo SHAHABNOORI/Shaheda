@@ -440,6 +440,42 @@ namespace Shaheda
             return command;
         }
 
+        private UpdateClientContactInfoCommand CreateUpdateClientContactInfoCommand()
+        {
+            var command = new UpdateClientContactInfoCommand()
+            {
+                ClientCode = _filteredClient.ClientCode,
+                ClientAddress = new ClientAddressCommand()
+                {
+                    Town = (Town)comboBoxTown.SelectedValue,
+                    City = (City)comboBoxCity.SelectedValue,
+                    Address = txtAddress.Text,
+                    BussinesAddress = txtBussinessAddress.Text,
+                    PostalCode = txtAddressInfoPostalCode.Text
+                },
+                ClientContact = new ClientContactCommand()
+                {
+                    OkToContact = (OkToContact)comboBoxOKToContact.SelectedValue,
+                    ContactType = (ClientContactType)comboBoxContactType.SelectedValue,
+                    EmailAddress = txtEmailAdrress.Text,
+                    HomeNumber = txtHomeNumber.Text,
+                    MobileNumber = txtMobileNumber.Text,
+                    PhoneNumber = txtPhoneNumber.Text,
+                    Website = txtWebsite.Text
+                },
+                ClientDeliveryAddress = new ClientDeliveryAddressCommand()
+                {
+                    Town = txtDeliveryAddressTown.Text,
+                    City = txtDeliveryAddressCity.Text,
+                    Address = txtEmergencyAddress.Text,
+                    PostalCode = txtDeliveryPostalCode.Text,
+                    PhoneNumber = txtDeliveryAddressPhoneNumber.Text,
+                    Name = txtDeliveryAddressName.Text
+                }
+            };
+            return command;
+        }
+
         private void BtnClearForm_Click(object sender, RoutedEventArgs e)
         {
             ClearForm();
@@ -561,7 +597,47 @@ namespace Shaheda
                     ReasonForRefrral = txtPaymentReasonForReferral.Text,
                     ReferralTel = txtPaymentRefferalTel.Text
                 },
-                ClientPurchaceInformation = new ClientPurchaceInformationCommand()
+                ClientPurchaceInformation = new ClientPurchaceInfoCommand()
+                {
+                    Balance = txtBalance.Text,
+                    Credit = txtCredit.Text,
+                    Discount = txtDiscount.Text,
+                    PaymentMethod = txtPurchasePaymentMethod.Text,
+                    PaymentTerms = txtPaymentTerms.Text,
+                    Pricing = txtPricing.Text,
+                    Vat = txtVAT.Text
+                }
+            };
+            return command;
+        }
+
+        private UpdateClientPurchaceInfoCommand CreateUpdateClientPurchaceInformationCommand()
+        {
+            var command = new UpdateClientPurchaceInfoCommand()
+            {
+                ClientCode = _filteredClient.ClientCode,
+                ClientExtraInformation = new ClientExtraInformationCommand()
+                {
+                    Name = txtExtraInformationName.Text,
+                    ContactNumber = txtExtraInformationContactNumber.Text,
+                    Ntk = txtExtraInformationNtk.Text,
+                    RelationShip = txtExtraInformationRelationship.Text
+                },
+                ClientPayment = new ClientPaymentCommand()
+                {
+                    Name = txtPaymetnName.Text,
+                    OtherReqirments = (OtherReqirments)comboOtherRequirements.SelectedValue,
+                    GpsName = (GpsName)comboGpsName.SelectedValue,
+                    ReferralFor = (ReferralFor)comboReferralFor.SelectedValue,
+                    Therapist = (Therapist)comboTraphist.SelectedValue,
+                    ReferralBy = (ReferralBy)comboReferralBy.SelectedValue,
+                    DateOfReferral = dateOfReferralSelector.SelectedDate,
+                    GpsAddress = txtPaymentGPsAddress.Text,
+                    GpsNumber = txtPaymentGPsNumber.Text,
+                    ReasonForRefrral = txtPaymentReasonForReferral.Text,
+                    ReferralTel = txtPaymentRefferalTel.Text
+                },
+                ClientPurchaceInformation = new ClientPurchaceInfoCommand()
                 {
                     Balance = txtBalance.Text,
                     Credit = txtCredit.Text,
@@ -583,35 +659,13 @@ namespace Shaheda
         /// <param name="e"></param>
         private void BtnUpdateClientBaseInfo_Click(object sender, RoutedEventArgs e)
         {
-            if (_filteredClient == null)
-            {
-                MessageBox.Show("Please First Filter your client", "Filter Client");
-                return;
-            }
+            if (CheckForFilteredClient()) return;
 
             try
             {
-                var command = new UpdateClientBaseInfoCommand()
-                {
-                    ClientCode = _filteredClient.ClientCode,
-                    ClientCategory = (ClientCategory)comboBoxClientCategory.SelectedValue,
-                    Dob = dobSelector.SelectedDate,
-                    Title = (Titles)comboBoxTitle.SelectedValue,
-                    Gender = (Gender)comboBoxGender.SelectedValue,
-                    Name = txtName.Text,
-                    NickName = txtNickname.Text,
-                    Relation = (ClientRelation)comboBoxRelation.SelectedValue,
-                    Salesman = (ClientSalesman)comboBoxSalesman.SelectedValue,
-                    SexualOrientation = (SexualOrientation)comboBoxSexual.SelectedValue,
-                    Status = (ClientStatus)comboBoxStatus.SelectedValue,
-                    Surname = txtSurname.Text,
-                    Photo = _imgByteArr,
-                    OriginId = (int)((CustomeComboboxItem)comboOrigin.SelectedValue).Value
-                };
+                var command = CreateUpdateClientBaseInfoCommand();
                 var result = RequestHelper.PutCommand(command, "http://localhost:5000/ClientBaseInfo");
-                MessageBox.Show($"{command.Name} {command.Surname} with {result} client code successfully created", "Successfully Created");
-                ClientBaseInfoUpdateMode();
-
+                MessageBox.Show("Client Base Info Successfully Has Been Updated", "Updated");
             }
             catch (Exception)
             {
@@ -619,14 +673,71 @@ namespace Shaheda
             }
         }
 
-        private void BtnUpdateClientPurchaseInfo_Click(object sender, RoutedEventArgs e)
+        private UpdateClientBaseInfoCommand CreateUpdateClientBaseInfoCommand()
         {
+            var command = new UpdateClientBaseInfoCommand()
+            {
+                ClientCode = _filteredClient.ClientCode,
+                ClientCategory = (ClientCategory)comboBoxClientCategory.SelectedValue,
+                Dob = dobSelector.SelectedDate,
+                Title = (Titles)comboBoxTitle.SelectedValue,
+                Gender = (Gender)comboBoxGender.SelectedValue,
+                Name = txtName.Text,
+                NickName = txtNickname.Text,
+                Relation = (ClientRelation)comboBoxRelation.SelectedValue,
+                Salesman = (ClientSalesman)comboBoxSalesman.SelectedValue,
+                SexualOrientation = (SexualOrientation)comboBoxSexual.SelectedValue,
+                Status = (ClientStatus)comboBoxStatus.SelectedValue,
+                Surname = txtSurname.Text,
+                Photo = _imgByteArr,
+                OriginId = (int)((CustomeComboboxItem)comboOrigin.SelectedValue).Value
+            };
+            return command;
+        }
+
+        private bool CheckForFilteredClient()
+        {
+            if (_filteredClient != null) return false;
+            MessageBox.Show("Please First Filter your client", "Filter Client");
+            return true;
 
         }
 
+        private void BtnUpdateClientPurchaseInfo_Click(object sender, RoutedEventArgs e)
+        {
+            if (CheckForFilteredClient()) return;
+            try
+            {
+                var command = CreateUpdateClientPurchaceInformationCommand();
+                RequestHelper.PutCommand(command, "http://localhost:5000/ClientPurchaceInfo");
+                MessageBox.Show("Client Purchase Info Successfully Has Been Updated", "Updated");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please Fill All Data Correctly", "InCorrect Input");
+            }
+        }
+
+        /// <summary>
+        /// ویرایش اطلاعات تماس کلاینت
+        /// Update Client Contact Info
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnUpdateClientContatcInfo_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+
+            if (CheckForFilteredClient()) return;
+            try
+            {
+                var command = CreateUpdateClientContactInfoCommand();
+                RequestHelper.PutCommand(command, "http://localhost:5000/ClientContactInfo");
+                MessageBox.Show("Client Contact Info Successfully Has Been Updated", "Updated");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please Fill All Data Correctly", "InCorrect Input");
+            }
         }
     }
 }

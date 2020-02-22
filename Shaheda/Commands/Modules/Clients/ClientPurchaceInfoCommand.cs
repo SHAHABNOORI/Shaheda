@@ -1,6 +1,6 @@
 ﻿namespace Shaheda.Commands.Modules.Clients
 {
-    public class ClientPurchaceInformationCommand
+    public class ClientPurchaceInfoCommand
     {
         public string Balance { get; set; }
 
