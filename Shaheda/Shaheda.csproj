@@ -101,6 +101,7 @@
     <Compile Include="Enums\ReferralBy.cs" />
     <Compile Include="Enums\ReferralFor.cs" />
     <Compile Include="Enums\ResultType.cs" />
+    <Compile Include="Enums\SelectedTab.cs" />
     <Compile Include="Enums\SexualOrientation.cs" />
     <Compile Include="Enums\Therapist.cs" />
     <Compile Include="Enums\Titles.cs" />

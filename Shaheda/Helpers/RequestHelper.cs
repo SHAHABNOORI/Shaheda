@@ -17,19 +17,66 @@ namespace Shaheda.Helpers
             return JsonConvert.DeserializeObject<T>(responseString);
         }
 
-        public static void PostCommand(CommandBase command, string url)
+        public static string PostCommand(CommandBase command, string url)
         {
-            WebRequest request = WebRequest.Create(url);
-            request.Method = "POST";
-            string jsonData = JsonConvert.SerializeObject(command);
-            byte[] byteArray = System.Text.Encoding.UTF8.GetBytes(jsonData);
-            request.ContentType = "application/Json";
-            request.ContentLength = byteArray.Length;
-            Stream dataStream = request.GetRequestStream();
-            dataStream.Write(byteArray, 0, byteArray.Length);
-            dataStream.Close();
-            HttpWebResponse httpResponse = (HttpWebResponse)request.GetResponse();
-            httpResponse.Close();
+            try
+            {
+                string result;
+                WebRequest request = WebRequest.Create(url);
+                request.Method = "POST";
+                string jsonData = JsonConvert.SerializeObject(command);
+                byte[] byteArray = System.Text.Encoding.UTF8.GetBytes(jsonData);
+                request.ContentType = "application/Json";
+                request.ContentLength = byteArray.Length;
+                Stream dataStream = request.GetRequestStream();
+                dataStream.Write(byteArray, 0, byteArray.Length);
+                dataStream.Close();
+                HttpWebResponse httpResponse = (HttpWebResponse)request.GetResponse();
+
+                using (Stream resultStream = httpResponse.GetResponseStream())
+                {
+                    StreamReader reader = new StreamReader(resultStream ?? throw new InvalidOperationException());
+                    result = reader.ReadToEnd();
+                }
+                httpResponse.Close();
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        public static string PutCommand(CommandBase command, string url)
+        {
+            try
+            {
+                string result;
+                WebRequest request = WebRequest.Create(url);
+                request.Method = "Put";
+                string jsonData = JsonConvert.SerializeObject(command);
+                byte[] byteArray = System.Text.Encoding.UTF8.GetBytes(jsonData);
+                request.ContentType = "application/Json";
+                request.ContentLength = byteArray.Length;
+                Stream dataStream = request.GetRequestStream();
+                dataStream.Write(byteArray, 0, byteArray.Length);
+                dataStream.Close();
+                HttpWebResponse httpResponse = (HttpWebResponse)request.GetResponse();
+
+                using (Stream resultStream = httpResponse.GetResponseStream())
+                {
+                    StreamReader reader = new StreamReader(resultStream ?? throw new InvalidOperationException());
+                    result = reader.ReadToEnd();
+                }
+                httpResponse.Close();
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }

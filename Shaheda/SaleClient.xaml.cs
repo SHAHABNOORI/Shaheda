@@ -253,7 +253,10 @@ namespace Shaheda
                     Photo = _imgByteArr,
                     OriginId = (int)((CustomeComboboxItem)comboOrigin.SelectedValue).Value
                 };
-                RequestHelper.PostCommand(command, "http://localhost:5000/ClientBaseInfo");
+                var result = RequestHelper.PostCommand(command, "http://localhost:5000/ClientBaseInfo");
+                MessageBox.Show($"{command.Name} {command.Surname} with {result} client code successfully created", "Successfully Created");
+                ClientBaseInfoUpdateMode();
+
             }
             catch (Exception)
             {
@@ -292,8 +295,7 @@ namespace Shaheda
                 Value = _filteredClient.Origin.Id
             };
             image1.Source = ByteToImageConverter.ToImage(_filteredClient.Photo);
-            btnNewClient.IsEnabled = false;
-            btnClearForm.IsEnabled = true;
+            ClientBaseInfoUpdateMode();
             dobSelector.SelectedDate = _filteredClient.Dob;
 
             if (_filteredClient.ClientContact != null || _filteredClient.ClientDeliveryAddress != null ||
@@ -340,6 +342,15 @@ namespace Shaheda
                 SetClientPurchaseWithFilteredData();
             }
 
+        }
+
+        private void ClientBaseInfoUpdateMode()
+        {
+            btnNewClient.IsEnabled = false;
+            btnClearForm.IsEnabled = true;
+            btnNewClient.Visibility = Visibility.Hidden;
+            btnUpdateClientBaseInfo.Visibility = Visibility.Visible;
+            btnUpdateClientBaseInfo.IsEnabled = true;
         }
 
         private void ClientPurchaseInfoAddNewMode()
@@ -451,8 +462,7 @@ namespace Shaheda
             txtNickname.Text = "";
             comboOrigin.SelectedItem = null;
             image1.Source = (ImageSource)FindResource("blueuser");
-            btnNewClient.IsEnabled = true;
-            btnClearForm.IsEnabled = false;
+            ClientBaseInfoAddNewMode();
             comboBoxTown.SelectedValue = null;
             comboBoxCity.SelectedValue = null;
             txtAddress.Text = "";
@@ -497,9 +507,13 @@ namespace Shaheda
             ClientContactInfoAddNewMode();
         }
 
-        private void BtnUpdateClientContactInfo_Click(object sender, RoutedEventArgs e)
+        private void ClientBaseInfoAddNewMode()
         {
-            throw new NotImplementedException();
+            btnNewClient.IsEnabled = true;
+            btnNewClient.Visibility = Visibility.Visible;
+            btnClearForm.IsEnabled = false;
+            btnUpdateClientBaseInfo.Visibility = Visibility.Hidden;
+            btnUpdateClientBaseInfo.IsEnabled = false;
         }
 
         private void BtnAddClientPurchaceInfo_Click(object sender, RoutedEventArgs e)
@@ -561,15 +575,58 @@ namespace Shaheda
             return command;
         }
 
-        private void BtnUpdateClientPurchaseInfo_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
+        /// <summary>
+        /// ویرایش اطلاعات پایه کلاینت
+        /// Update Client Base Info
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnUpdateClientBaseInfo_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            if (_filteredClient == null)
+            {
+                MessageBox.Show("Please First Filter your client", "Filter Client");
+                return;
+            }
+
+            try
+            {
+                var command = new UpdateClientBaseInfoCommand()
+                {
+                    ClientCode = _filteredClient.ClientCode,
+                    ClientCategory = (ClientCategory)comboBoxClientCategory.SelectedValue,
+                    Dob = dobSelector.SelectedDate,
+                    Title = (Titles)comboBoxTitle.SelectedValue,
+                    Gender = (Gender)comboBoxGender.SelectedValue,
+                    Name = txtName.Text,
+                    NickName = txtNickname.Text,
+                    Relation = (ClientRelation)comboBoxRelation.SelectedValue,
+                    Salesman = (ClientSalesman)comboBoxSalesman.SelectedValue,
+                    SexualOrientation = (SexualOrientation)comboBoxSexual.SelectedValue,
+                    Status = (ClientStatus)comboBoxStatus.SelectedValue,
+                    Surname = txtSurname.Text,
+                    Photo = _imgByteArr,
+                    OriginId = (int)((CustomeComboboxItem)comboOrigin.SelectedValue).Value
+                };
+                var result = RequestHelper.PutCommand(command, "http://localhost:5000/ClientBaseInfo");
+                MessageBox.Show($"{command.Name} {command.Surname} with {result} client code successfully created", "Successfully Created");
+                ClientBaseInfoUpdateMode();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please Fill All Data Correctly", "InCorrect Input");
+            }
         }
 
+        private void BtnUpdateClientPurchaseInfo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnUpdateClientContatcInfo_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

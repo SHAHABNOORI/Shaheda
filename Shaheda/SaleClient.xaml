@@ -13,7 +13,7 @@
     </Window.Resources >
     <Grid Margin="0,0,3.6,0.8">
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="601" Margin="10,148,0,0" VerticalAlignment="Top" Width="778" Background="#FFE6EEF7" >
-            <TabItem Header="Basic Info " Background="#E6EEF7">
+            <TabItem Header="Basic Info " Background="#E6EEF7" >
                 <Grid Background="#FFE6EEF7" Margin="0,0,-3,-3.2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="88*"/>
@@ -69,13 +69,8 @@
                     <Label x:Name="lblDOB" Content="D.O.B" HorizontalAlignment="Left" Height="34" Margin="329,196,0,0" VerticalAlignment="Top" Width="116" Grid.Column="2"/>
                     <DatePicker  x:Name="dobSelector" HorizontalAlignment="Left" Height="25" Margin="462,196,0,0" VerticalAlignment="Top" Width="172" Grid.Column="2"/>
                     <Label x:Name="lblOrigin" Content="Origin" HorizontalAlignment="Left" Height="32" Margin="329,159,0,0" VerticalAlignment="Top" Width="116" Grid.Column="2"/>
-                    <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Height="30" Margin="512,534,0,0" VerticalAlignment="Top" Width="75 " Grid.Column="2"/>
-                    <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Height="30" Margin="432,534,0,0" VerticalAlignment="Top" Width="75 " Grid.Column="2"/>
-                    <Button x:Name="btnPrint" Content="Print" HorizontalAlignment="Left" Height="30" Margin="592,534,0,0" VerticalAlignment="Top" Width="75 " Grid.Column="2"/>
-                    <Button x:Name="btnNext" Content="&gt;" HorizontalAlignment="Left" Height="30" Margin="4,535,0,0" VerticalAlignment="Top" Width="35" Grid.ColumnSpan="2" Grid.Column="1"/>
-                    <Button x:Name="btnFirst" Content="First" HorizontalAlignment="Left" Height="30" Margin="12,535,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnPrevious" Content="Pre" HorizontalAlignment="Left" Height="30" Margin="52,535,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnLast" Content="&gt;&gt;" HorizontalAlignment="Left" Height="30" Margin="39,535,0,0" VerticalAlignment="Top" Width="35" Grid.Column="2"/>
+                    <Button x:Name="btnNewClient" Content="Add" HorizontalAlignment="Left" Height="30" Margin="592,534,0,0" VerticalAlignment="Top" Width="75"  Grid.Column="2" Click="BtnNewClient_Click"/>
+                    <Button x:Name="btnUpdateClientBaseInfo" Content="Update" HorizontalAlignment="Left" Height="30" Margin="592,534,0,0" VerticalAlignment="Top" Width="75"  Grid.Column="2" Click="BtnUpdateClientBaseInfo_Click" IsEnabled="False" Visibility="Hidden"/>
                     <ComboBox x:Name="comboOrigin"  HorizontalAlignment="Left" Height="25" Margin="462,159,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboOrigin_Loaded" Grid.Column="2">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
@@ -93,8 +88,6 @@
                             </LinearGradientBrush>
                         </ComboBox.Background>
                     </ComboBox>
-                    <Button x:Name="btnNewClient" Content="Add New Client"  HorizontalAlignment="Left" Height="31" Margin="329,42,0,0" VerticalAlignment="Top" Width="305" Background="#FFA2CEFF" Click="BtnNewClient_Click" Grid.Column="2"/>
-                    <Button x:Name="btnUpdateClientBaseInfo" Content="Add New Client"  HorizontalAlignment="Left" Height="31" Margin="329,42,0,0" VerticalAlignment="Top" Width="305" Background="#FFA2CEFF" Click="BtnUpdateClientBaseInfo_Click" Grid.Column="2" Visibility="Hidden" IsEnabled="False"/>
                     <GroupBox x:Name="groupBox_Copy" Header="Photo " HorizontalAlignment="Left" Height="190" Margin="10,275,0,0" VerticalAlignment="Top" Width="305" BorderBrush="#FF9F9F9F" FontWeight="Bold" Grid.ColumnSpan="3"/>
                     <Button x:Name="btnUploadPhoto" Content="Upload Photo" HorizontalAlignment="Left" Height="31" Margin="82,410,0,0" VerticalAlignment="Top" Width="150" Background="#FFA2CEFF" Click="BtnUploadPhoto_Click" Grid.ColumnSpan="3"/>
                     <GroupBox x:Name="groupBox_Copy1" Header="Client Category " HorizontalAlignment="Left" Height="190" Margin="314,275,0,0" VerticalAlignment="Top" Width="353" BorderBrush="#FF9F9F9F" FontWeight="Bold" Grid.Column="2"/>
@@ -116,7 +109,7 @@
                             </LinearGradientBrush>
                         </ComboBox.Background>
                     </ComboBox>
-                    <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="352,534,0,0" VerticalAlignment="Top" Width="75 " Grid.Column="2"/>
+                    <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="501,534,0,0" VerticalAlignment="Top" Width="75 " Grid.Column="2"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Contact" Background="#E6EEF7" Margin="-1.6,0">
@@ -188,24 +181,13 @@
                     <TextBox x:Name="txtEmergencyAddress" HorizontalAlignment="Left" Height="25" Margin="521,396,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
                     <Label x:Name="lblDeliveryAddressPhoneNumber" Content="Phone Number" HorizontalAlignment="Left" Height="25" Margin="408,429,0,0" VerticalAlignment="Top" Width="109"/>
                     <TextBox x:Name="txtDeliveryAddressPhoneNumber" HorizontalAlignment="Left" Height="25" Margin="522,429,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
-                    <Label x:Name="lblSituation_Copy" Content="Client Contact Info" HorizontalAlignment="Left" Height="35" Margin="15,485,0,0" VerticalAlignment="Top" Width="116"/>
-
-                    <Button x:Name="btnAddClientContactInfo" Content="Add Client Contact Info" HorizontalAlignment="Left" Height="25" Margin="141,485,0,0" VerticalAlignment="Top" Width="172" Background="#FFA2CEFF" Click="BtnAddClientContactInfo_Click"/>
-                    <Button x:Name="btnUpdateClientContactInfo" Content="Update Client Contact Info" HorizontalAlignment="Left" Height="25" Margin="141,485,0,0" VerticalAlignment="Top" Width="172" Background="#FFA2CEFF" Click="BtnUpdateClientContactInfo_Click" IsEnabled="False" Visibility="Hidden"/>
-                   
-                    <Button x:Name="btnSave_Copy" Content="Save" HorizontalAlignment="Left" Height="30" Margin="605,534,0,0" VerticalAlignment="Top" Width="75 "/>
-                    <Button x:Name="btnEdit_Copy" Content="Edit" HorizontalAlignment="Left" Height="30" Margin="525,534,0,0" VerticalAlignment="Top" Width="75 "/>
-                    <Button x:Name="btnPrint_Copy" Content="Print" HorizontalAlignment="Left" Height="30" Margin="685,534,0,0" VerticalAlignment="Top" Width="75 "/>
-                    <Button x:Name="btnNext_Copy" Content="&gt;" HorizontalAlignment="Left" Height="30" Margin="92,535,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnFirst_Copy" Content="First" HorizontalAlignment="Left" Height="30" Margin="12,535,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnPrevious_Copy" Content="Pre" HorizontalAlignment="Left" Height="30" Margin="52,535,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnLast_Copy" Content="&gt;&gt;" HorizontalAlignment="Left" Height="30" Margin="132,535,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnDelete_Copy" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="445,534,0,0" VerticalAlignment="Top" Width="75 "/>
+                    <Button x:Name="btnAddClientContactInfo" Content="Add" HorizontalAlignment="Left" Height="30" Margin="682,534,0,0" VerticalAlignment="Top" Width="75 " Click="BtnAddClientContactInfo_Click"/>
+                    <Button x:Name="btnUpdateClientContactInfo" Content="Update" HorizontalAlignment="Left" Height="30" Margin="682,534,0,0" VerticalAlignment="Top" Width="75 " Click="BtnUpdateClientContatcInfo_Click" IsEnabled="False" Visibility="Hidden"/>
                 </Grid>
             </TabItem>
 
 
-            <TabItem Header="Purchase Information" Background="#E6EEF7" >
+            <TabItem Header="Purchase Information" Background="#E6EEF7">
                 <Grid Background="#E6EEF7" Margin="0,-1,0,1.8">
                     <GroupBox x:Name="groupBox2" Header="Purchase Information " HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" VerticalAlignment="Top" Width="747" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
                     <Label x:Name="lblBalance" Content="Balance" HorizontalAlignment="Left" Height="25" Margin="21,38,0,0" VerticalAlignment="Top" Width="128"/>
@@ -294,8 +276,6 @@
                         </ComboBox.Background>
 
                     </ComboBox>
-                    <Button x:Name="btnAddClientPurchaceInfo" Content="Add Client Purchace Info" HorizontalAlignment="Left" Height="25" Margin="547,480,0,0" VerticalAlignment="Top" Width="172" Background="#FFA2CEFF" Click="BtnAddClientPurchaceInfo_Click"/>
-                    <Button x:Name="btnUpdateClientPurchaceInfo" Content="Update Client Contact Info" HorizontalAlignment="Left" Height="25" Margin="547,480,0,0" VerticalAlignment="Top" Width="172" Background="#FFA2CEFF" Click="BtnUpdateClientPurchaseInfo_Click" IsEnabled="False" Visibility="Hidden"/>
                     <TextBox x:Name="txtPaymentGPsNumber" HorizontalAlignment="Left" Height="25" Margin="547,373,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
                     <Label x:Name="lblGPsName" Content="GP's Name" HorizontalAlignment="Left" Height="32" Margin="417,337,0,0" VerticalAlignment="Top" Width="125"/>
                     <Label x:Name="lblReasonForReferral" Content="Reason For Referral" HorizontalAlignment="Left" Height="32" Margin="19,478,0,0" VerticalAlignment="Top" Width="125"/>
@@ -323,14 +303,8 @@
                     <TextBox x:Name="txtPaymentReasonForReferral" HorizontalAlignment="Left" Height="25" Margin="149,478,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
                     <TextBox x:Name="txtPaymentGPsAddress" HorizontalAlignment="Left" Height="25" Margin="547,410,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
                     <Label x:Name="lblOtherRequirements" Content="Other Requirements" HorizontalAlignment="Left" Height="32" Margin="414,445,0,0" VerticalAlignment="Top" Width="120"/>
-                    <Button x:Name="btnSave_Copy1" Content="Save" HorizontalAlignment="Left" Height="30" Margin="605,534,0,0" VerticalAlignment="Top" Width="75 "/>
-                    <Button x:Name="btnEdit_Copy1" Content="Edit" HorizontalAlignment="Left" Height="30" Margin="525,534,0,0" VerticalAlignment="Top" Width="75 "/>
-                    <Button x:Name="btnPrint_Copy1" Content="Print" HorizontalAlignment="Left" Height="30" Margin="685,534,0,0" VerticalAlignment="Top" Width="75 "/>
-                    <Button x:Name="btnNext_Copy1" Content="&gt;" HorizontalAlignment="Left" Height="30" Margin="92,535,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnFirst_Copy1" Content="First" HorizontalAlignment="Left" Height="30" Margin="12,535,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnPrevious_Copy1" Content="Pre" HorizontalAlignment="Left" Height="30" Margin="52,535,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnLast_Copy1" Content="&gt;&gt;" HorizontalAlignment="Left" Height="30" Margin="132,535,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnDelete_Copy1" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="445,534,0,0" VerticalAlignment="Top" Width="75 "/>
+                    <Button x:Name="btnAddClientPurchaceInfo" Content="Add" HorizontalAlignment="Left" Height="30" Margin="682,534,0,0" VerticalAlignment="Top" Width="75 " Click="BtnAddClientPurchaceInfo_Click"/>
+                    <Button x:Name="btnUpdateClientPurchaceInfo" Content="Update" HorizontalAlignment="Left" Height="30" Margin="682,534,0,0" VerticalAlignment="Top" Width="75 " Click="BtnUpdateClientPurchaseInfo_Click" IsEnabled="False" Visibility="Hidden"/>
                 </Grid>
             </TabItem>
 
