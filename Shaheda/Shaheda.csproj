@@ -96,6 +96,7 @@
     <Compile Include="Enums\ClientCategory.cs" />
     <Compile Include="Enums\ClientSalesman.cs" />
     <Compile Include="Enums\ClientStatus.cs" />
+    <Compile Include="Enums\EmployeeStatus.cs" />
     <Compile Include="Enums\Gender.cs" />
     <Compile Include="Enums\GpsName.cs" />
     <Compile Include="Enums\OkToContact.cs" />
@@ -151,8 +152,11 @@
     <Compile Include="ViewModels\Clients\ClientInfoViewModel.cs" />
     <Compile Include="ViewModels\Clients\ClientPaymentViewModel.cs" />
     <Compile Include="ViewModels\Clients\ClientPurchaseViewModel.cs" />
+    <Compile Include="ViewModels\Degrees\DegreeViewModel.cs" />
+    <Compile Include="ViewModels\Educations\EducationViewModel.cs" />
     <Compile Include="ViewModels\Languages\LanguageViewModel.cs" />
     <Compile Include="ViewModels\Origins\OriginViewModel.cs" />
+    <Compile Include="ViewModels\Skills\SkillViewModel.cs" />
     <Page Include="AdministrativeEmpolyment.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

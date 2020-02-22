@@ -1,6 +1,6 @@
 ﻿namespace Shaheda.Enums
 {
-    public enum EmployeeStatus
+    public enum ClientStatus
     {
         Active,Deactive
     }
