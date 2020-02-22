@@ -68,6 +68,8 @@ namespace Shaheda
                     Text = origin.OriginName
                 });
             }
+            if (comboOrigin.Items.Count > 0)
+                comboOrigin.SelectedIndex = 0;
         }
 
         private void ComboBoxSalesman_Loaded(object sender, RoutedEventArgs e)
@@ -289,11 +291,8 @@ namespace Shaheda
             txtclientcode.Text = _filteredClient.ClientCode.ToString();
             txtNickname.Text = _filteredClient.NickName;
 
-            comboOrigin.SelectedItem = new CustomeComboboxItem()
-            {
-                Text = _filteredClient.Origin.OriginName,
-                Value = _filteredClient.Origin.Id
-            };
+            comboOrigin.SelectedItem = GetComboItem(comboOrigin, _filteredClient.Origin.Id);
+
             image1.Source = ByteToImageConverter.ToImage(_filteredClient.Photo);
             ClientBaseInfoUpdateMode();
             dobSelector.SelectedDate = _filteredClient.Dob;
@@ -342,6 +341,23 @@ namespace Shaheda
                 SetClientPurchaseWithFilteredData();
             }
 
+        }
+
+        private CustomeComboboxItem GetComboItem<T>(ComboBox comboBox, T value)
+        {
+            if (comboBox?.Items == null)
+                return null;
+
+            foreach (var comboItem in comboBox.Items)
+            {
+                if (!(comboItem is CustomeComboboxItem item && item.Value is T itemValue))
+                    return null;
+
+                if (itemValue.Equals(value))
+                    return item;
+            }
+
+            return null;
         }
 
         private void ClientBaseInfoUpdateMode()
