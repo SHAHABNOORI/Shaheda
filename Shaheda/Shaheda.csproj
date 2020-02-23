@@ -84,6 +84,10 @@
     <Compile Include="Commands\Modules\Clients\UpdateClientBaseInfoCommand.cs" />
     <Compile Include="Commands\Modules\Clients\UpdateClientContactInfoCommand.cs" />
     <Compile Include="Commands\Modules\Clients\UpdateClientPurchaceInfoCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\CreateEmployeePersonalInfoCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\EmployeeDegreeCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\EmployeeSkillCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\UpdateEmployeePersonalInfoCommand.cs" />
     <Compile Include="Commands\Modules\Languages\CreateLanguageCommand.cs" />
     <Compile Include="Commands\Modules\Languages\UpdateLanguageCommand.cs" />
     <Compile Include="Commands\Modules\Origins\CreateOriginCommand.cs" />
@@ -154,6 +158,7 @@
     <Compile Include="ViewModels\Clients\ClientPurchaseViewModel.cs" />
     <Compile Include="ViewModels\Degrees\DegreeViewModel.cs" />
     <Compile Include="ViewModels\Educations\EducationViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeInfoViewModel.cs" />
     <Compile Include="ViewModels\Languages\LanguageViewModel.cs" />
     <Compile Include="ViewModels\Origins\OriginViewModel.cs" />
     <Compile Include="ViewModels\Skills\SkillViewModel.cs" />

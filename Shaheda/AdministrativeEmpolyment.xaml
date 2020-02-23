@@ -62,7 +62,7 @@
                     <Label x:Name="lblPersonalNumber" Content="Personal Number" HorizontalAlignment="Left" Height="25" Margin="413,117,0,0" VerticalAlignment="Top" Width="116"/>
                     <TextBox x:Name="txtPersonalNumber" HorizontalAlignment="Left" Height="25" Margin="536,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
                     <Label x:Name="lblDOB" Content="D.O.B" HorizontalAlignment="Left" Height="34" Margin="413,224,0,0" VerticalAlignment="Top" Width="116"/>
-                    <DatePicker HorizontalAlignment="Left" Height="25" Margin="536,225,0,0" VerticalAlignment="Top" Width="172"/>
+                    <DatePicker x:Name="employeeDobSelector"  HorizontalAlignment="Left" Height="25" Margin="536,225,0,0" VerticalAlignment="Top" Width="172"/>
                     <Label x:Name="lblOrigin" Content="Origin" HorizontalAlignment="Left" Height="32" Margin="413,188,0,0" VerticalAlignment="Top" Width="116"/>
                     <ComboBox x:Name="comboOrigin"  HorizontalAlignment="Left" Height="25" Margin="536,188,0,0" VerticalAlignment="Top" Width="172"  Loaded="ComboOrigin_Loaded">
                         <ComboBox.Background>
@@ -109,8 +109,8 @@
                             </LinearGradientBrush>
                         </ComboBox.Background>
                     </ComboBox>
-                    <Button x:Name="btnAdd" Content="Add New Person" HorizontalAlignment="Left" Height="31" Margin="413,36,0,0" VerticalAlignment="Top" Width="295" Background="#FFA2CEFF"/>
-                    <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Height="30" Margin="685,501,0,0" VerticalAlignment="Top" Width="75 "/>
+                    <Button x:Name="btnAddEmployeePersonalInfo" Content="Add" HorizontalAlignment="Left" Height="30" Margin="685,501,0,0" VerticalAlignment="Top" Width="75"  Grid.Column="2" Click="BtnAddEmployeePersonalInfo_Click"/>
+                    <Button x:Name="btnUpdateEmployeePersonalInfo" Content="Save" HorizontalAlignment="Left" Height="30" Margin="685,501,0,0" VerticalAlignment="Top" Width="75 " IsEnabled="False" Visibility="Hidden" Click="BtnUpdateEmployeePersonalInfo_Click"/>
                     <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="594,501,0,0" VerticalAlignment="Top" Width="75 "/>
                 </Grid>
             </TabItem>
@@ -365,13 +365,9 @@
         </TabControl>
         <Image x:Name="image" HorizontalAlignment="Left" Height="90" Margin="30,20,0,0" VerticalAlignment="Top" Width="90" Source="img/blueuser.png"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="110" Margin="10,10,0,0" VerticalAlignment="Top" Width="773" CornerRadius="8"/>
-        <Label x:Name="lblHeaderSurname" Content="Surname" HorizontalAlignment="Left" Height="25" Margin="155,30,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="txtHeaderSurname" HorizontalAlignment="Left" Height="25" Margin="230,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170"/>
-        <Label x:Name="lblHeaderForename" Content="Forename" HorizontalAlignment="Left" Height="25" Margin="155,70,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="txtHeaderForename" HorizontalAlignment="Left" Height="25" Margin="230,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170"/>
-        <Label x:Name="lblHeaderSurname_Copy" Content="Code" HorizontalAlignment="Left" Height="25" Margin="480,30,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="txtHeaderSurname_Copy" HorizontalAlignment="Left" Height="25" Margin="555,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170"/>
-        <Label x:Name="lblHeaderForename_Copy" Content="Nickname" HorizontalAlignment="Left" Height="25" Margin="480,70,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox x:Name="txtHeaderForename_Copy" HorizontalAlignment="Left" Height="25" Margin="555,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170"/>
+        <Label x:Name="lblEmployeeNumberFilter" Content="Employee Number" HorizontalAlignment="Left" Height="30" Margin="138,55,0,0" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name="txtEmployeeNumberFilter" HorizontalAlignment="Left" Height="30" Margin="250,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170"/>
+        <Button x:Name="btnFilterEmployee" Content="Filter" HorizontalAlignment="Left" Height="30" Margin="430,55,0,0" VerticalAlignment="Top" Width="75 " Click="BtnFilterEmployee_Click"/>
+        <Button x:Name="btnClearForm" Content="Clear Form" HorizontalAlignment="Left" Height="30" Margin="525,55,0,0" VerticalAlignment="Top" Width="75 " Click="BtnClearForm_Click" />
     </Grid>
 </Window>
