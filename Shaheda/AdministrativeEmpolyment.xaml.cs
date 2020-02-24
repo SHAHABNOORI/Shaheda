@@ -251,6 +251,17 @@ namespace Shaheda
             }
             BindPersonalInfoToForm();
             ClientEmployeePersonalInfoUpdateMode();
+
+            if (_filteredEmployee.EmployeeRecruitment != null)
+            {
+                ClientEmployeeRecruitmentInfoUpdateMode();
+            }
+
+            if (_filteredEmployee.EmployeeContactInfo != null)
+            {
+                ClientEmployeeContactInfoUpdateMode();
+            }
+
         }
 
         private void BindPersonalInfoToForm()
@@ -271,6 +282,68 @@ namespace Shaheda
             comboBoxEducation.SelectedItem = GetComboItem(comboBoxEducation, _filteredEmployee.Education.Id);
             comboBoxLanguage.SelectedItem = GetComboItem(comboBoxLanguage, _filteredEmployee.Language.Id);
             comboBoxSkills.SelectedItem = GetComboItem(comboBoxSkills, _filteredEmployee.EmployeeSkill.Id);
+            if (_filteredEmployee.EmployeeAddressInfo != null)
+            {
+                txtEmployeeAddressInfoAddreessOne.Text = _filteredEmployee.EmployeeAddressInfo.AddressOne;
+                comboBoxEmployeeAddressInfoCity.SelectedValue = _filteredEmployee.EmployeeAddressInfo.City;
+                txtEmployeeAddressInfoAddreessTwo.Text = _filteredEmployee.EmployeeAddressInfo.AddressTwo;
+                txtEmployeeAddressInfoEmail.Text = _filteredEmployee.EmployeeAddressInfo.Email;
+                txtEmployeeAddressInfoPostalCode.Text = _filteredEmployee.EmployeeAddressInfo.PostalCode;
+                comboBoxEmployeeAddressInfoTown.SelectedValue = _filteredEmployee.EmployeeAddressInfo.Town;
+            }
+
+            if (_filteredEmployee.EmployeeContactInfo != null)
+            {
+                txtEmployeeContactInfoPostalCode.Text = _filteredEmployee.EmployeeContactInfo.PostalCode;
+                comboBoxEmployeeContactInfoContactType.SelectedValue = _filteredEmployee.EmployeeContactInfo.ContactType;
+                txtEmployeeContactInfoMobileNumber.Text = _filteredEmployee.EmployeeContactInfo.MobileNumber;
+                comboBoxEmployeeContactInfoOKToContact.SelectedValue = _filteredEmployee.EmployeeContactInfo.OkToContact;
+                txtEmployeeContactInfoPhoneNumber.Text = _filteredEmployee.EmployeeContactInfo.PhoneNumber;
+            }
+
+            if (_filteredEmployee.EmployeeEmergencyContactInfo != null)
+            {
+                txtEmergencyContactPhoneNumber.Text = _filteredEmployee.EmployeeEmergencyContactInfo.PhoneNumber;
+                txtEmergencyContactName.Text = _filteredEmployee.EmployeeEmergencyContactInfo.Name;
+                comboboxEmergencyContactRelationship.SelectedValue = _filteredEmployee.EmployeeEmergencyContactInfo.Relation;
+            }
+
+            if (_filteredEmployee.EmployeeBankInfo != null)
+            {
+                comboBoxSortCode.SelectedValue = _filteredEmployee.EmployeeBankInfo.SortCode;
+                comboBoxAccountName.SelectedValue = _filteredEmployee.EmployeeBankInfo.AccountName;
+                txtAccountNo.Text = _filteredEmployee.EmployeeBankInfo.AccountNo;
+                txtBankBame.Text = _filteredEmployee.EmployeeBankInfo.BankName;
+                txtIBAN.Text = _filteredEmployee.EmployeeBankInfo.Iban;
+            }
+
+            if (_filteredEmployee.EmployeePayment != null)
+            {
+                comboBoxPaymentMethod.SelectedValue = _filteredEmployee.EmployeePayment.PaymentMethod;
+                comboBoxPayFrequency.SelectedValue = _filteredEmployee.EmployeePayment.PaymentFrequency;
+            }
+
+            if (_filteredEmployee.EmployeeRecruitment != null)
+            {
+                dateLeftSelector.SelectedDate = _filteredEmployee.EmployeeRecruitment.DateLeft;
+                datePensionSelector.SelectedDate = _filteredEmployee.EmployeeRecruitment.DatePensionStarted;
+                dateStartedSelector.SelectedDate = _filteredEmployee.EmployeeRecruitment.DateStarted;
+                txtInsuranceNuber.Text = _filteredEmployee.EmployeeRecruitment.InsuarenceNumber;
+                txtReaseon.Text = _filteredEmployee.EmployeeRecruitment.Reason;
+                comboBoxReruitmentRelaionship.SelectedValue = _filteredEmployee.EmployeeRecruitment.Relationship;
+                comboBoxTypeOfEmpolyment.SelectedValue = _filteredEmployee.EmployeeRecruitment.TypeOfEmployment;
+            }
+
+            if (_filteredEmployee.EmployeeWork != null)
+            {
+                comboBoxShift.SelectedValue = _filteredEmployee.EmployeeWork.Shift;
+                comboBoxUnit.SelectedValue = _filteredEmployee.EmployeeWork.Unit;
+                comboBoxDepartment.SelectedValue = _filteredEmployee.EmployeeWork.Department;
+                comboBoxJobTitle.SelectedValue = _filteredEmployee.EmployeeWork.JobTitle;
+                comboBoxHours.SelectedValue = _filteredEmployee.EmployeeWork.Hour;
+                txtTimecardNo.Text = _filteredEmployee.EmployeeWork.TimecardNo;
+            }
+
         }
 
         private void ClearForm()
@@ -290,7 +363,44 @@ namespace Shaheda
             comboBoxEducation.SelectedItem = null;
             comboBoxLanguage.SelectedItem = null;
             comboBoxSkills.SelectedItem = null;
+            txtEmployeeAddressInfoAddreessOne.Text = "";
+            comboBoxEmployeeAddressInfoCity.SelectedValue = null;
+            txtEmployeeAddressInfoAddreessTwo.Text = "";
+            txtEmployeeAddressInfoEmail.Text = "";
+            txtEmployeeAddressInfoPostalCode.Text = "";
+            comboBoxEmployeeAddressInfoTown.SelectedValue = null;
+            txtEmployeeContactInfoPostalCode.Text = _filteredEmployee.EmployeeContactInfo.PostalCode;
+            comboBoxEmployeeContactInfoContactType.SelectedValue = null;
+            txtEmployeeContactInfoMobileNumber.Text = _filteredEmployee.EmployeeContactInfo.MobileNumber;
+            comboBoxEmployeeContactInfoOKToContact.SelectedValue = null;
+            txtEmployeeContactInfoPhoneNumber.Text = "";
+            txtEmergencyContactPhoneNumber.Text = "";
+            txtEmergencyContactName.Text = "";
+            comboboxEmergencyContactRelationship.SelectedValue = null;
+            comboBoxSortCode.SelectedValue = null;
+            comboBoxAccountName.SelectedValue = null;
+            txtAccountNo.Text = "";
+            txtBankBame.Text = "";
+            txtIBAN.Text = "";
+            comboBoxPaymentMethod.SelectedValue = null;
+            comboBoxPayFrequency.SelectedValue = null;
+            dateLeftSelector.SelectedDate = null;
+            datePensionSelector.SelectedDate = null;
+            dateStartedSelector.SelectedDate = null;
+            txtInsuranceNuber.Text = "";
+            txtReaseon.Text = "";
+            comboBoxReruitmentRelaionship.SelectedValue = null;
+            comboBoxTypeOfEmpolyment.SelectedValue = null;
+            comboBoxShift.SelectedValue = null;
+            comboBoxUnit.SelectedValue = null;
+            comboBoxDepartment.SelectedValue = null;
+            comboBoxJobTitle.SelectedValue = null;
+            comboBoxHours.SelectedValue = null;
+            txtTimecardNo.Text = "";
+
             ClientEmployeePersonalInfoNewMode();
+            ClientEmployeeRecruitmentInfoNewMode();
+            ClientEmployeeContactInfoNewMode();
         }
 
         private void BtnClearForm_Click(object sender, RoutedEventArgs e)
@@ -359,6 +469,304 @@ namespace Shaheda
             if (_filteredEmployee != null) return false;
             MessageBox.Show("Please First Filter your employee", "Filter Employee");
             return true;
+        }
+
+        private void BtnAddEmployeeContactInfo_Click(object sender, RoutedEventArgs e)
+        {
+            if (CheckForFilteredEmployee()) return;
+            try
+            {
+                var command = new CreateEmployeeContactInfoCommand()
+                {
+                    EmployeeNumber = _filteredEmployee.EmployeeNumber,
+                    EmployeeAddressInfo = new EmployeeAddressInfoCommand()
+                    {
+                        AddressOne = txtEmployeeAddressInfoAddreessOne.Text,
+                        City = (City)comboBoxEmployeeAddressInfoCity.SelectedValue,
+                        AddressTwo = txtEmployeeAddressInfoAddreessTwo.Text,
+                        Email = txtEmployeeAddressInfoEmail.Text,
+                        PostalCode = txtEmployeeAddressInfoPostalCode.Text,
+                        Town = (Town)comboBoxEmployeeAddressInfoTown.SelectedValue
+                    },
+                    EmployeeContactInfo = new EmployeeContactInfoCommand()
+                    {
+                        PostalCode = txtEmployeeContactInfoPostalCode.Text,
+                        ContactType = (EmployeeContactType)comboBoxEmployeeContactInfoContactType.SelectedValue,
+                        MobileNumber = txtEmployeeContactInfoMobileNumber.Text,
+                        OkToContact = (OkToContact)comboBoxEmployeeContactInfoOKToContact.SelectedValue,
+                        PhoneNumber = txtEmployeeContactInfoPhoneNumber.Text
+                    },
+                    EmployeeEmergencyContactInfo = new EmployeeEmergencyContactInfoCommand()
+                    {
+                        PhoneNumber = txtEmergencyContactPhoneNumber.Text,
+                        Name = txtEmergencyContactName.Text,
+                        Relation = (EmployeeRelation)comboboxEmergencyContactRelationship.SelectedValue
+                    }
+                };
+                var result = RequestHelper.PostCommand(command, "http://localhost:5000/EmployeeContactInfo");
+                MessageBox.Show("Employee Contact Info Successfully Has Been Updated", "Successfully Updated");
+                ClientEmployeeContactInfoUpdateMode();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please Fill All Data Correctly", "InCorrect Input");
+            }
+        }
+
+        private void BtnUpdateEmployeeContactInfo_Click(object sender, RoutedEventArgs e)
+        {
+            if (CheckForFilteredEmployee()) return;
+            try
+            {
+                var command = new UpdateEmployeeContactInfoCommand()
+                {
+                    EmployeeNumber = _filteredEmployee.EmployeeNumber,
+                    EmployeeAddressInfo = new EmployeeAddressInfoCommand()
+                    {
+                        AddressOne = txtEmployeeAddressInfoAddreessOne.Text,
+                        City = (City)comboBoxEmployeeAddressInfoCity.SelectedValue,
+                        AddressTwo = txtEmployeeAddressInfoAddreessTwo.Text,
+                        Email = txtEmployeeAddressInfoEmail.Text,
+                        PostalCode = txtEmployeeAddressInfoPostalCode.Text,
+                        Town = (Town)comboBoxEmployeeAddressInfoTown.SelectedValue
+                    },
+                    EmployeeContactInfo = new EmployeeContactInfoCommand()
+                    {
+                        PostalCode = txtEmployeeContactInfoPostalCode.Text,
+                        ContactType = (EmployeeContactType)comboBoxEmployeeContactInfoContactType.SelectedValue,
+                        MobileNumber = txtEmployeeContactInfoMobileNumber.Text,
+                        OkToContact = (OkToContact)comboBoxEmployeeContactInfoOKToContact.SelectedValue,
+                        PhoneNumber = txtEmployeeContactInfoPhoneNumber.Text
+                    },
+                    EmployeeEmergencyContactInfo = new EmployeeEmergencyContactInfoCommand()
+                    {
+                        PhoneNumber = txtEmergencyContactPhoneNumber.Text,
+                        Name = txtEmergencyContactName.Text,
+                        Relation = (EmployeeRelation)comboboxEmergencyContactRelationship.SelectedValue
+                    }
+                };
+                var result = RequestHelper.PutCommand(command, "http://localhost:5000/EmployeeContactInfo");
+                MessageBox.Show("Employee Contact Info Successfully Has Been Updated", "Successfully Updated");
+                ClientEmployeeContactInfoUpdateMode();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please Fill All Data Correctly", "InCorrect Input");
+            }
+        }
+
+        private void ClientEmployeeContactInfoUpdateMode()
+        {
+            btnUpdateEmployeeContactInfo.IsEnabled = true;
+            btnUpdateEmployeeContactInfo.Visibility = Visibility.Visible;
+            btnAddEmployeeConatctInfo.IsEnabled = false;
+            btnAddEmployeeConatctInfo.Visibility = Visibility.Hidden;
+        }
+
+        private void ClientEmployeeContactInfoNewMode()
+        {
+            btnUpdateEmployeeContactInfo.IsEnabled = false;
+            btnUpdateEmployeeContactInfo.Visibility = Visibility.Hidden;
+            btnAddEmployeeConatctInfo.IsEnabled = true;
+            btnAddEmployeeConatctInfo.Visibility = Visibility.Visible;
+        }
+
+        private void ComboBoxEmployeeContactInfoContactType_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxEmployeeContactInfoContactType.ItemsSource = Enum.GetValues(typeof(EmployeeContactType)).Cast<EmployeeContactType>();
+        }
+
+        private void ComboBoxEmployeeAddressInfoCity_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxEmployeeAddressInfoCity.ItemsSource = Enum.GetValues(typeof(City)).Cast<City>();
+        }
+
+        private void ComboBoxEmployeeAddressInfoTown_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxEmployeeAddressInfoTown.ItemsSource = Enum.GetValues(typeof(Town)).Cast<Town>();
+        }
+
+        private void ComboBoxEmployeeContactInfoOKToContact_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxEmployeeContactInfoOKToContact.ItemsSource = Enum.GetValues(typeof(OkToContact)).Cast<OkToContact>();
+        }
+
+        private void ComboboxEmergencyContactRelationship_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboboxEmergencyContactRelationship.ItemsSource = Enum.GetValues(typeof(EmployeeRelation)).Cast<EmployeeRelation>();
+        }
+
+        private void ComboBoxTypeOfEmpolyment_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxTypeOfEmpolyment.ItemsSource = Enum.GetValues(typeof(TypeOfEmployment)).Cast<TypeOfEmployment>();
+        }
+
+        private void ComboBoxReruitmentRelaionship_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxReruitmentRelaionship.ItemsSource = Enum.GetValues(typeof(EmployeeRecruitmentRelationShip)).Cast<EmployeeRecruitmentRelationShip>();
+        }
+
+        private void ComboBoxJobTitle_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxJobTitle.ItemsSource = Enum.GetValues(typeof(JobTitle)).Cast<JobTitle>();
+        }
+
+        private void ComboBoxDepartment_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxDepartment.ItemsSource = Enum.GetValues(typeof(Department)).Cast<Department>();
+        }
+
+        private void ComboBoxShift_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxShift.ItemsSource = Enum.GetValues(typeof(Shift)).Cast<Shift>();
+        }
+
+        private void ComboBoxHours_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxHours.ItemsSource = Enum.GetValues(typeof(Hour)).Cast<Hour>();
+        }
+
+        private void ComboBoxAccountName_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxAccountName.ItemsSource = Enum.GetValues(typeof(AccountName)).Cast<AccountName>();
+        }
+
+        private void ComboBoxUnit_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxUnit.ItemsSource = Enum.GetValues(typeof(Unit)).Cast<Unit>();
+        }
+
+        private void ComboBoxSortCode_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxSortCode.ItemsSource = Enum.GetValues(typeof(SortCode)).Cast<SortCode>();
+        }
+
+        private void ComboBoxPayFrequency_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxPayFrequency.ItemsSource = Enum.GetValues(typeof(PaymentFrequency)).Cast<PaymentFrequency>();
+        }
+
+        private void ComboBoxPaymentMethod_Loaded(object sender, RoutedEventArgs e)
+        {
+            comboBoxPaymentMethod.ItemsSource = Enum.GetValues(typeof(PaymentMethod)).Cast<PaymentMethod>();
+        }
+
+        private void BtnAddEmployeeRecruitmentInfo_Click(object sender, RoutedEventArgs e)
+        {
+            if (CheckForFilteredEmployee()) return;
+            try
+            {
+                var command = new CreateEmployeeRecruitmentInfoCommand()
+                {
+                    EmployeeNumber = _filteredEmployee.EmployeeNumber,
+                    EmployeeBankInfo = new EmployeeBankInfoCommand()
+                    {
+                        SortCode = (SortCode)comboBoxSortCode.SelectedValue,
+                        AccountName = (AccountName)comboBoxAccountName.SelectedValue,
+                        AccountNo = txtAccountNo.Text,
+                        BankName = txtBankBame.Text,
+                        Iban = txtIBAN.Text
+                    },
+                    EmployeePayment = new EmployeePaymentCommand()
+                    {
+                        PaymentMethod = (PaymentMethod)comboBoxPaymentMethod.SelectedValue,
+                        PaymentFrequency = (PaymentFrequency)comboBoxPayFrequency.SelectedValue
+                    },
+                    EmployeeRecruitment = new EmployeeRecruitmentCommand()
+                    {
+                        DateLeft = dateLeftSelector.SelectedDate,
+                        DatePensionStarted = datePensionSelector.SelectedDate,
+                        DateStarted = dateStartedSelector.SelectedDate,
+                        InsuarenceNumber = txtInsuranceNuber.Text,
+                        Reason = txtReaseon.Text,
+                        Relationship = (EmployeeRecruitmentRelationShip)comboBoxReruitmentRelaionship.SelectedValue,
+                        TypeOfEmployment = (TypeOfEmployment)comboBoxTypeOfEmpolyment.SelectedValue
+                    },
+                    EmployeeWork = new EmployeeWorkCommand()
+                    {
+                        Shift = (Shift)comboBoxShift.SelectedValue,
+                        Unit = (Unit)comboBoxUnit.SelectedValue,
+                        Department = (Department)comboBoxDepartment.SelectedValue,
+                        JobTitle = (JobTitle)comboBoxJobTitle.SelectedValue,
+                        Hour = (Hour)comboBoxHours.SelectedValue,
+                        TimecardNo = txtTimecardNo.Text
+                    }
+                };
+                var result = RequestHelper.PostCommand(command, "http://localhost:5000/EmployeeRecruitmentInfo");
+                MessageBox.Show("Employee Recruitment Info Successfully Has Been Updated", "Successfully Updated");
+                ClientEmployeeRecruitmentInfoUpdateMode();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please Fill All Data Correctly", "InCorrect Input");
+            }
+        }
+
+        private void ClientEmployeeRecruitmentInfoUpdateMode()
+        {
+            btnUpdateEmployeeRecruitmentInfo.IsEnabled = true;
+            btnUpdateEmployeeRecruitmentInfo.Visibility = Visibility.Visible;
+            btnAddEmployeeRecruitmentInfo.IsEnabled = false;
+            btnAddEmployeeRecruitmentInfo.Visibility = Visibility.Hidden;
+        }
+
+        private void ClientEmployeeRecruitmentInfoNewMode()
+        {
+            btnUpdateEmployeeRecruitmentInfo.IsEnabled = false;
+            btnUpdateEmployeeRecruitmentInfo.Visibility = Visibility.Hidden;
+            btnAddEmployeeRecruitmentInfo.IsEnabled = true;
+            btnAddEmployeeRecruitmentInfo.Visibility = Visibility.Visible;
+        }
+
+        private void BtnUpdateEmployeeRecruitmentInfo_Click(object sender, RoutedEventArgs e)
+        {
+            if (CheckForFilteredEmployee()) return;
+            try
+            {
+                var command = new CreateEmployeeRecruitmentInfoCommand()
+                {
+                    EmployeeNumber = _filteredEmployee.EmployeeNumber,
+                    EmployeeBankInfo = new EmployeeBankInfoCommand()
+                    {
+                        SortCode = (SortCode)comboBoxSortCode.SelectedValue,
+                        AccountName = (AccountName)comboBoxAccountName.SelectedValue,
+                        AccountNo = txtAccountNo.Text,
+                        BankName = txtBankBame.Text,
+                        Iban = txtIBAN.Text
+                    },
+                    EmployeePayment = new EmployeePaymentCommand()
+                    {
+                        PaymentMethod = (PaymentMethod)comboBoxPaymentMethod.SelectedValue,
+                        PaymentFrequency = (PaymentFrequency)comboBoxPayFrequency.SelectedValue
+                    },
+                    EmployeeRecruitment = new EmployeeRecruitmentCommand()
+                    {
+                        DateLeft = dateLeftSelector.SelectedDate,
+                        DatePensionStarted = datePensionSelector.SelectedDate,
+                        DateStarted = dateStartedSelector.SelectedDate,
+                        InsuarenceNumber = txtInsuranceNuber.Text,
+                        Reason = txtReaseon.Text,
+                        Relationship = (EmployeeRecruitmentRelationShip)comboBoxReruitmentRelaionship.SelectedValue,
+                        TypeOfEmployment = (TypeOfEmployment)comboBoxTypeOfEmpolyment.SelectedValue
+                    },
+                    EmployeeWork = new EmployeeWorkCommand()
+                    {
+                        Shift = (Shift)comboBoxShift.SelectedValue,
+                        Unit = (Unit)comboBoxUnit.SelectedValue,
+                        Department = (Department)comboBoxDepartment.SelectedValue,
+                        JobTitle = (JobTitle)comboBoxJobTitle.SelectedValue,
+                        Hour = (Hour)comboBoxHours.SelectionBoxItem,
+                        TimecardNo = txtTimecardNo.Text
+                    }
+                };
+                var result = RequestHelper.PutCommand(command, "http://localhost:5000/EmployeeRecruitmentInfo");
+                MessageBox.Show("Employee Recruitment Info Successfully Has Been Updated", "Successfully Updated");
+                ClientEmployeeContactInfoUpdateMode();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please Fill All Data Correctly", "InCorrect Input");
+            }
         }
     }
 }

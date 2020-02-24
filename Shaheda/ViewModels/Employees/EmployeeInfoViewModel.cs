@@ -41,5 +41,19 @@ namespace Shaheda.ViewModels.Employees
         public SkillViewModel EmployeeSkill { get; set; }
 
         public  DegreeViewModel EmployeeDegree { get; set; }
+
+        public EmployeeAddressInfoViewModel EmployeeAddressInfo { get; set; }
+
+        public EmployeeContactInfoViewModel EmployeeContactInfo { get; set; }
+
+        public EmployeeEmergencyContactInfoViewModel EmployeeEmergencyContactInfo { get; set; }
+
+        public EmployeeRecruitmentViewModel EmployeeRecruitment { get; set; }
+
+        public EmployeePaymentViewModel EmployeePayment { get; set; }
+
+        public EmployeeBankInfoViewModel EmployeeBankInfo { get; set; }
+
+        public EmployeeWorkViewModel EmployeeWork { get; set; }
     }
 }

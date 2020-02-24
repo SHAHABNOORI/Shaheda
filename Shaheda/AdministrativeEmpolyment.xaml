@@ -10,9 +10,13 @@
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="566" Margin="10,135,0,0" VerticalAlignment="Top" Width="773" Background="#FFE6EEF7">
             <TabItem Header="Personal" Background="#E6EEF7">
                 <Grid Background="#FFE6EEF7" Margin="0,0,-3.2,-3.4">
-                    <Label x:Name="lblTitle" Content="Title" HorizontalAlignment="Left" Height="25" Margin="28,42,0,0" VerticalAlignment="Top" Width="66"/>
-                    <GroupBox x:Name="groupBox" Header="Personal Information" HorizontalAlignment="Left" Height="269" Margin="10,10,0,0" VerticalAlignment="Top" Width="750" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
-                    <ComboBox x:Name="comboBoxTitle"  HorizontalAlignment="Left" Height="25" Margin="104,48,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxTitle_Loaded" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="46*"/>
+                        <ColumnDefinition Width="339*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblTitle" Content="Title" HorizontalAlignment="Left" Height="25" Margin="28,42,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2"/>
+                    <GroupBox x:Name="groupBox" Header="Personal Information" HorizontalAlignment="Left" Height="269" Margin="10,10,0,0" VerticalAlignment="Top" Width="750" BorderBrush="#FF9F9F9F" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="comboBoxTitle"  HorizontalAlignment="Left" Height="25" Margin="12,48,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxTitle_Loaded" Grid.Column="1">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -24,16 +28,16 @@
                     <RadioButton x:Name="radioButtonMs" Content="Ms" HorizontalAlignment="Left" Height="25" Margin="250,48,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="-0.052,0.368"/>
                     <RadioButton x:Name="radioButtonMiss" Content="Miss" HorizontalAlignment="Left" Height="25" Margin="197,48,0,0" VerticalAlignment="Top" Width="53"/>
                     <RadioButton x:Name="radioButtonMrs" Content="Mrs" HorizontalAlignment="Left" Height="25" Margin="148,48,0,0" VerticalAlignment="Top" Width="49"/>-->
-                    <Label x:Name="lblTitle_Copy" Content="Passport Number" HorizontalAlignment="Left" Height="25" Margin="413,83,0,0" VerticalAlignment="Top" Width="118"/>
-                    <TextBox x:Name="txtPassportNumber" HorizontalAlignment="Left" Height="25" Margin="536,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
-                    <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" Height="25" Margin="28,83,0,0" VerticalAlignment="Top" Width="66"/>
-                    <Label x:Name="lblSurname" Content="Surname" HorizontalAlignment="Left" Height="25" Margin="28,117,0,0" VerticalAlignment="Top" Width="66"/>
-                    <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="25" Margin="105,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
-                    <TextBox x:Name="txtSurname" HorizontalAlignment="Left" Height="25" Margin="105,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
-                    <Label x:Name="lblNickname" Content="Nickname" HorizontalAlignment="Left" Height="25" Margin="28,152,0,0" VerticalAlignment="Top" Width="66"/>
-                    <TextBox x:Name="txtNickname" HorizontalAlignment="Left" Height="25" Margin="105,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
-                    <Label x:Name="lblGender" Content="Gender" HorizontalAlignment="Left" Height="25" Margin="29,188,0,0" VerticalAlignment="Top" Width="66"/>
-                    <ComboBox x:Name="comboBoxGender"  HorizontalAlignment="Left" Height="25" Margin="106,188,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxGender_Loaded">
+                    <Label x:Name="lblTitle_Copy" Content="Passport Number" HorizontalAlignment="Left" Height="25" Margin="321,83,0,0" VerticalAlignment="Top" Width="118" Grid.Column="1"/>
+                    <TextBox x:Name="txtPassportNumber" HorizontalAlignment="Left" Height="25" Margin="444,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Grid.Column="1"/>
+                    <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" Height="25" Margin="28,83,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2"/>
+                    <Label x:Name="lblSurname" Content="Surname" HorizontalAlignment="Left" Height="25" Margin="28,117,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="25" Margin="13,83,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Grid.Column="1"/>
+                    <TextBox x:Name="txtSurname" HorizontalAlignment="Left" Height="25" Margin="13,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Grid.Column="1"/>
+                    <Label x:Name="lblNickname" Content="Nickname" HorizontalAlignment="Left" Height="25" Margin="28,152,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="txtNickname" HorizontalAlignment="Left" Height="25" Margin="13,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Grid.Column="1"/>
+                    <Label x:Name="lblGender" Content="Gender" HorizontalAlignment="Left" Height="25" Margin="29,188,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="comboBoxGender"  HorizontalAlignment="Left" Height="25" Margin="14,188,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxGender_Loaded" Grid.Column="1">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -41,8 +45,8 @@
                             </LinearGradientBrush>
                         </ComboBox.Background>
                     </ComboBox>
-                    <Label x:Name="lblStatus" Content="Status" HorizontalAlignment="Left" Height="25" Margin="29,225,0,0" VerticalAlignment="Top" Width="66"/>
-                    <ComboBox x:Name="comboBoxStatus"  HorizontalAlignment="Left" Height="25" Margin="106,225,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxStatus_Loaded">
+                    <Label x:Name="lblStatus" Content="Status" HorizontalAlignment="Left" Height="25" Margin="29,225,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="comboBoxStatus"  HorizontalAlignment="Left" Height="25" Margin="14,225,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxStatus_Loaded" Grid.Column="1">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -50,8 +54,8 @@
                             </LinearGradientBrush>
                         </ComboBox.Background>
                     </ComboBox>
-                    <Label x:Name="lblSexual" Content="Sexual Orientation" HorizontalAlignment="Left" Height="25" Margin="413,152,0,0" VerticalAlignment="Top" Width="116"/>
-                    <ComboBox x:Name="comboBoxSexual"  HorizontalAlignment="Left" Height="25" Margin="536,152,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxSexual_Loaded">
+                    <Label x:Name="lblSexual" Content="Sexual Orientation" HorizontalAlignment="Left" Height="25" Margin="321,152,0,0" VerticalAlignment="Top" Width="116" Grid.Column="1"/>
+                    <ComboBox x:Name="comboBoxSexual"  HorizontalAlignment="Left" Height="25" Margin="444,152,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxSexual_Loaded" Grid.Column="1">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -59,12 +63,12 @@
                             </LinearGradientBrush>
                         </ComboBox.Background>
                     </ComboBox>
-                    <Label x:Name="lblPersonalNumber" Content="Personal Number" HorizontalAlignment="Left" Height="25" Margin="413,117,0,0" VerticalAlignment="Top" Width="116"/>
-                    <TextBox x:Name="txtPersonalNumber" HorizontalAlignment="Left" Height="25" Margin="536,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
-                    <Label x:Name="lblDOB" Content="D.O.B" HorizontalAlignment="Left" Height="34" Margin="413,224,0,0" VerticalAlignment="Top" Width="116"/>
-                    <DatePicker x:Name="employeeDobSelector"  HorizontalAlignment="Left" Height="25" Margin="536,225,0,0" VerticalAlignment="Top" Width="172"/>
-                    <Label x:Name="lblOrigin" Content="Origin" HorizontalAlignment="Left" Height="32" Margin="413,188,0,0" VerticalAlignment="Top" Width="116"/>
-                    <ComboBox x:Name="comboOrigin"  HorizontalAlignment="Left" Height="25" Margin="536,188,0,0" VerticalAlignment="Top" Width="172"  Loaded="ComboOrigin_Loaded">
+                    <Label x:Name="lblPersonalNumber" Content="Personal Number" HorizontalAlignment="Left" Height="25" Margin="321,117,0,0" VerticalAlignment="Top" Width="116" Grid.Column="1"/>
+                    <TextBox x:Name="txtPersonalNumber" HorizontalAlignment="Left" Height="25" Margin="444,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172" Grid.Column="1"/>
+                    <Label x:Name="lblDOB" Content="D.O.B" HorizontalAlignment="Left" Height="34" Margin="321,224,0,0" VerticalAlignment="Top" Width="116" Grid.Column="1"/>
+                    <DatePicker x:Name="employeeDobSelector"  HorizontalAlignment="Left" Height="25" Margin="444,225,0,0" VerticalAlignment="Top" Width="172" Grid.Column="1"/>
+                    <Label x:Name="lblOrigin" Content="Origin" HorizontalAlignment="Left" Height="32" Margin="321,188,0,0" VerticalAlignment="Top" Width="116" Grid.Column="1"/>
+                    <ComboBox x:Name="comboOrigin"  HorizontalAlignment="Left" Height="25" Margin="444,188,0,0" VerticalAlignment="Top" Width="172"  Loaded="ComboOrigin_Loaded" Grid.Column="1">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -72,9 +76,9 @@
                             </LinearGradientBrush>
                         </ComboBox.Background>
                     </ComboBox>
-                    <GroupBox x:Name="groupBox_Copy5" Header="Extra Info" HorizontalAlignment="Left" Height="180" Margin="10,284,0,0" VerticalAlignment="Top" Width="750" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
-                    <Label x:Name="lblLanguage" Content="Language" HorizontalAlignment="Left" Height="32" Margin="28,313,0,0" VerticalAlignment="Top" Width="66"/>
-                    <ComboBox x:Name="comboBoxLanguage" HorizontalAlignment="Left" Height="25" Margin="106,313,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboLanguage_Loaded">
+                    <GroupBox x:Name="groupBox_Copy5" Header="Extra Info" HorizontalAlignment="Left" Height="180" Margin="10,284,0,0" VerticalAlignment="Top" Width="750" BorderBrush="#FF9F9F9F" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                    <Label x:Name="lblLanguage" Content="Language" HorizontalAlignment="Left" Height="32" Margin="28,313,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="comboBoxLanguage" HorizontalAlignment="Left" Height="25" Margin="14,313,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboLanguage_Loaded" Grid.Column="1">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -82,8 +86,8 @@
                             </LinearGradientBrush>
                         </ComboBox.Background>
                     </ComboBox>
-                    <Label x:Name="lblDegrees" Content="Degrees" HorizontalAlignment="Left" Height="32" Margin="29,350,0,0" VerticalAlignment="Top" Width="66"/>
-                    <ComboBox x:Name="comboBoxDegree"  HorizontalAlignment="Left" Height="25" Margin="106,350,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboDegree_Loaded">
+                    <Label x:Name="lblDegrees" Content="Degrees" HorizontalAlignment="Left" Height="32" Margin="29,350,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="comboBoxDegree"  HorizontalAlignment="Left" Height="25" Margin="14,350,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboDegree_Loaded" Grid.Column="1">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -92,16 +96,8 @@
                         </ComboBox.Background>
 
                     </ComboBox>
-                    <Label x:Name="lblEducation" Content="Education" HorizontalAlignment="Left" Height="25" Margin="29,387,0,0" VerticalAlignment="Top" Width="66"/>
-                    <ComboBox x:Name="comboBoxEducation"  HorizontalAlignment="Left" Height="25" Margin="106,387,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboEducation_Loaded">
-                        <ComboBox.Background>
-                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
-                            </LinearGradientBrush>
-                        </ComboBox.Background></ComboBox>
-                    <Label x:Name="lblSkills" Content="Skills" HorizontalAlignment="Left" Height="25" Margin="29,424,0,0" VerticalAlignment="Top" Width="66"/>
-                    <ComboBox x:Name="comboBoxSkills"  HorizontalAlignment="Left" Height="25" Margin="106,424,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboSkill_Loaded">
+                    <Label x:Name="lblEducation" Content="Education" HorizontalAlignment="Left" Height="25" Margin="29,387,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="comboBoxEducation"  HorizontalAlignment="Left" Height="25" Margin="14,387,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboEducation_Loaded" Grid.Column="1">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -109,9 +105,18 @@
                             </LinearGradientBrush>
                         </ComboBox.Background>
                     </ComboBox>
-                    <Button x:Name="btnAddEmployeePersonalInfo" Content="Add" HorizontalAlignment="Left" Height="30" Margin="685,501,0,0" VerticalAlignment="Top" Width="75"  Grid.Column="2" Click="BtnAddEmployeePersonalInfo_Click"/>
-                    <Button x:Name="btnUpdateEmployeePersonalInfo" Content="Save" HorizontalAlignment="Left" Height="30" Margin="685,501,0,0" VerticalAlignment="Top" Width="75 " IsEnabled="False" Visibility="Hidden" Click="BtnUpdateEmployeePersonalInfo_Click"/>
-                    <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="594,501,0,0" VerticalAlignment="Top" Width="75 "/>
+                    <Label x:Name="lblSkills" Content="Skills" HorizontalAlignment="Left" Height="25" Margin="29,424,0,0" VerticalAlignment="Top" Width="66" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="comboBoxSkills"  HorizontalAlignment="Left" Height="25" Margin="14,424,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboSkill_Loaded" Grid.Column="1">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="#FFE6EEF7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Button x:Name="btnAddEmployeePersonalInfo" Content="Add" HorizontalAlignment="Left" Height="30" Margin="593,501,0,0" VerticalAlignment="Top" Width="75"  Grid.Column="1" Click="BtnAddEmployeePersonalInfo_Click"/>
+                    <Button x:Name="btnUpdateEmployeePersonalInfo" Content="Save" HorizontalAlignment="Left" Height="30" Margin="593,501,0,0" VerticalAlignment="Top" Width="75 " IsEnabled="False" Visibility="Hidden" Click="BtnUpdateEmployeePersonalInfo_Click" Grid.Column="1"/>
+                    <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="502,501,0,0" VerticalAlignment="Top" Width="75 " Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Contact" Background="#E6EEF7">
@@ -119,185 +124,150 @@
                     <GroupBox x:Name="groupBox1_Copy" Header="Contact Info " HorizontalAlignment="Left" Height="154" Margin="10,10,0,0" VerticalAlignment="Top" Width="737" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
                     <Label x:Name="lblPhoneNumber" Content="Phone Number" HorizontalAlignment="Left" Height="25" Margin="22,42,0,0" VerticalAlignment="Top" Width="107"/>
                     <Label x:Name="lblMobileNumber" Content="Mobile Number" HorizontalAlignment="Left" Height="25" Margin="22,76,0,0" VerticalAlignment="Top" Width="107"/>
-                    <TextBox x:Name="txtPhoneNumber" HorizontalAlignment="Left" Height="25" Margin="129,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
-                    <TextBox x:Name="txtMobileNumber" HorizontalAlignment="Left" Height="25" Margin="129,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtEmployeeContactInfoPhoneNumber" HorizontalAlignment="Left" Height="25" Margin="129,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtEmployeeContactInfoMobileNumber" HorizontalAlignment="Left" Height="25" Margin="129,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
                     <Label x:Name="lblOkTOContact" Content="Ok To Contact" HorizontalAlignment="Left" Height="25" Margin="408,41,0,0" VerticalAlignment="Top" Width="107"/>
-                    <ComboBox x:Name="comboBoxOKToContact"  HorizontalAlignment="Left" Height="25" Margin="515,41,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboBoxEmployeeContactInfoOKToContact"  HorizontalAlignment="Left" Height="25" Margin="515,41,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxEmployeeContactInfoOKToContact_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Male" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Female" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
                     </ComboBox>
                     <Label x:Name="lblHomeNumber" Content="Post Code" HorizontalAlignment="Left" Height="25" Margin="22,111,0,0" VerticalAlignment="Top" Width="66"/>
                     <Label x:Name="lblContactType" Content="Contact Type" HorizontalAlignment="Left" Height="33" Margin="408,75,0,0" VerticalAlignment="Top" Width="102"/>
-                    <TextBox x:Name="txtHomeNumber" HorizontalAlignment="Left" Height="25" Margin="129,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
-                    <ComboBox x:Name="comboBoxContactType"  HorizontalAlignment="Left" Height="25" Margin="515,75,0,0" VerticalAlignment="Top" Width="172">
+                    <TextBox x:Name="txtEmployeeContactInfoPostalCode" HorizontalAlignment="Left" Height="25" Margin="129,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <ComboBox x:Name="comboBoxEmployeeContactInfoContactType"  HorizontalAlignment="Left" Height="25" Margin="515,75,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxEmployeeContactInfoContactType_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Male" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Female" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
                     </ComboBox>
                     <GroupBox x:Name="groupBox1_Copy1" Header="Address Info" HorizontalAlignment="Left" Height="151" Margin="10,173,0,0" VerticalAlignment="Top" Width="737" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
                     <Label x:Name="lblAddress" Content="Address" HorizontalAlignment="Left" Height="25" Margin="22,208,0,0" VerticalAlignment="Top" Width="66"/>
                     <Label x:Name="lblAddress2" Content="Address" HorizontalAlignment="Left" Height="25" Margin="22,240,0,0" VerticalAlignment="Top" Width="66"/>
-                    <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="25" Margin="129,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
-                    <TextBox x:Name="txtSurnametext" HorizontalAlignment="Left" Height="25" Margin="129,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtEmployeeAddressInfoAddreessOne" HorizontalAlignment="Left" Height="25" Margin="129,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtEmployeeAddressInfoAddreessTwo" HorizontalAlignment="Left" Height="25" Margin="129,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
                     <Label x:Name="lblTown" Content="Town" HorizontalAlignment="Left" Height="25" Margin="22,274,0,0" VerticalAlignment="Top" Width="66"/>
-                    <ComboBox x:Name="comboBoxTown"  HorizontalAlignment="Left" Height="25" Margin="129,274,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboBoxEmployeeAddressInfoTown"  HorizontalAlignment="Left" Height="25" Margin="129,274,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxEmployeeAddressInfoTown_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Male" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Female" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
                     </ComboBox>
                     <Label x:Name="lblPostCode_Copy" Content="Post Code" HorizontalAlignment="Left" Height="25" Margin="404,274,0,0" VerticalAlignment="Top" Width="66"/>
                     <Label x:Name="lblEmail_Copy" Content="Email" HorizontalAlignment="Left" Height="25" Margin="404,241,0,0" VerticalAlignment="Top" Width="66"/>
-                    <TextBox x:Name="txtAddress_Copy2" HorizontalAlignment="Left" Height="25" Margin="515,274,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
-                    <TextBox x:Name="txtSurname_Copy3" HorizontalAlignment="Left" Height="25" Margin="515,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtEmployeeAddressInfoPostalCode" HorizontalAlignment="Left" Height="25" Margin="515,274,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtEmployeeAddressInfoEmail" HorizontalAlignment="Left" Height="25" Margin="515,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
                     <Label x:Name="lblCity" Content="City" HorizontalAlignment="Left" Height="33" Margin="404,208,0,0" VerticalAlignment="Top" Width="66"/>
-                    <ComboBox x:Name="comboBoxCity"  HorizontalAlignment="Left" Height="25" Margin="515,208,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboBoxEmployeeAddressInfoCity"  HorizontalAlignment="Left" Height="25" Margin="515,208,0,0" VerticalAlignment="Top" Width="172"  Loaded="ComboBoxEmployeeAddressInfoCity_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Male" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Female" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
                     </ComboBox>
                     <Label x:Name="lblEmergencyContactName" Content="Name" HorizontalAlignment="Left" Height="25" Margin="21,364,0,0" VerticalAlignment="Top" Width="66"/>
                     <TextBox x:Name="txtEmergencyContactName" HorizontalAlignment="Left" Height="25" Margin="128,364,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173"/>
                     <Label x:Name="lblEmergencyContactPhoneNumber" Content="Phone Number" HorizontalAlignment="Left" Height="25" Margin="21,396,0,0" VerticalAlignment="Top" Width="100"/>
-                    <TextBox x:Name="txtEmergencyContactPhoneNumbe" HorizontalAlignment="Left" Height="25" Margin="128,396,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtEmergencyContactPhoneNumber" HorizontalAlignment="Left" Height="25" Margin="128,396,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
                     <Label x:Name="lblEmergencyContactRealationship" Content="Relationship" HorizontalAlignment="Left" Height="25" Margin="22,429,0,0" VerticalAlignment="Top" Width="90"/>
-                    <ComboBox x:Name="comboboxEmergencyContactRelationship"  HorizontalAlignment="Left" Height="25" Margin="129,429,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboboxEmergencyContactRelationship"  HorizontalAlignment="Left" Height="25" Margin="129,429,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboboxEmergencyContactRelationship_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Male" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Female" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
                     </ComboBox>
                     <GroupBox x:Name="groupBox1_Copy2" Header="Emergency Contact " HorizontalAlignment="Left" Height="137" Margin="10,334,0,0" VerticalAlignment="Top" Width="737" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
-                    <Button x:Name="btnSave_Copy" Content="Save" HorizontalAlignment="Left" Height="30" Margin="600,498,0,0" VerticalAlignment="Top" Width="75 "/>
-                    <Button x:Name="btnEdit_Copy" Content="Edit" HorizontalAlignment="Left" Height="30" Margin="520,498,0,0" VerticalAlignment="Top" Width="75 "/>
-                    <Button x:Name="btnPrint_Copy" Content="Print" HorizontalAlignment="Left" Height="30" Margin="680,498,0,0" VerticalAlignment="Top" Width="75 "/>
-                    <Button x:Name="btnNext_Copy" Content="&gt;" HorizontalAlignment="Left" Height="30" Margin="87,499,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnFirst_Copy" Content="First" HorizontalAlignment="Left" Height="30" Margin="7,499,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnPrevious_Copy" Content="Pre" HorizontalAlignment="Left" Height="30" Margin="47,499,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnLast_Copy" Content="&gt;&gt;" HorizontalAlignment="Left" Height="30" Margin="127,499,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnDelete_Copy" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="440,498,0,0" VerticalAlignment="Top" Width="75 "/>
+
+                    <Button x:Name="btnAddEmployeeConatctInfo" Content="Add" HorizontalAlignment="Left" Height="30" Margin="685,501,0,0" VerticalAlignment="Top" Width="75"  Grid.Column="2" Click="BtnAddEmployeeContactInfo_Click"/>
+                    <Button x:Name="btnUpdateEmployeeContactInfo" Content="Save" HorizontalAlignment="Left" Height="30" Margin="685,501,0,0" VerticalAlignment="Top" Width="75 " IsEnabled="False" Visibility="Hidden" Click="BtnUpdateEmployeeContactInfo_Click"/>
                 </Grid>
             </TabItem>
-
-
             <TabItem Header="Recruitment Information" Background="#E6EEF7">
                 <Grid Background="#E6EEF7" Margin="0,0,0.2,0.8">
                     <GroupBox x:Name="groupBox2" Header="Recruitment Information " HorizontalAlignment="Left" Height="158" Margin="10,10,0,0" VerticalAlignment="Top" Width="747" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
                     <Label x:Name="lblInsuranceNumber" Content="Insurance Number" HorizontalAlignment="Left" Height="25" Margin="21,38,0,0" VerticalAlignment="Top" Width="118"/>
-                    <TextBox x:Name="txtPassportNumber_Copy" HorizontalAlignment="Left" Height="25" Margin="149,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
+                    <TextBox x:Name="txtInsuranceNuber" HorizontalAlignment="Left" Height="25" Margin="149,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
                     <Label x:Name="lblTypeOfEmployment" Content="Type Of Employment" HorizontalAlignment="Left" Height="35" Margin="21,70,0,0" VerticalAlignment="Top" Width="131"/>
-                    <ComboBox x:Name="comboBoxTyoeOfEmpolyment"  HorizontalAlignment="Left" Height="25" Margin="149,70,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboBoxTypeOfEmpolyment"  HorizontalAlignment="Left" Height="25" Margin="149,70,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxTypeOfEmpolyment_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Male" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Female" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
                     </ComboBox>
                     <Label x:Name="lblRelationship" Content="Relationship" HorizontalAlignment="Left" Height="35" Margin="19,103,0,0" VerticalAlignment="Top" Width="131"/>
-                    <ComboBox x:Name="comboBoxRelationship"  HorizontalAlignment="Left" Height="25" Margin="149,104,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboBoxReruitmentRelaionship"  HorizontalAlignment="Left" Height="25" Margin="149,104,0,0" VerticalAlignment="Top" Width="172"  Loaded="ComboBoxReruitmentRelaionship_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Male" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Female" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
                     </ComboBox>
                     <Label x:Name="lblDateStarted" Content="Date Started" HorizontalAlignment="Left" Height="35" Margin="403,38,0,0" VerticalAlignment="Top" Width="131"/>
-                    <DatePicker HorizontalAlignment="Left" Height="25" Margin="547,39,0,0" VerticalAlignment="Top" Width="172"/>
-                    <DatePicker HorizontalAlignment="Left" Height="25" Margin="546,70,0,0" VerticalAlignment="Top" Width="172"/>
+                    <DatePicker x:Name="dateStartedSelector" HorizontalAlignment="Left" Height="25" Margin="547,39,0,0" VerticalAlignment="Top" Width="172"/>
+                    <DatePicker x:Name="dateLeftSelector" HorizontalAlignment="Left" Height="25" Margin="546,70,0,0" VerticalAlignment="Top" Width="172"/>
                     <Label x:Name="lblDateLeft" Content="Date Left" HorizontalAlignment="Left" Height="25" Margin="403,70,0,0" VerticalAlignment="Top" Width="131"/>
                     <Label x:Name="lblIReaseon" Content="Reaseon" HorizontalAlignment="Left" Height="25" Margin="19,137,0,0" VerticalAlignment="Top" Width="118"/>
                     <TextBox x:Name="txtReaseon" HorizontalAlignment="Left" Height="25" Margin="149,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
                     <Label x:Name="lblDatePensionStarted" Content="Date Pension Started" HorizontalAlignment="Left" Height="25" Margin="403,102,0,0" VerticalAlignment="Top" Width="143"/>
-                    <DatePicker x:Name="datepickerPension" HorizontalAlignment="Left" Height="25" Margin="546,103,0,0" VerticalAlignment="Top" Width="172"/>
+                    <DatePicker x:Name="datePensionSelector" HorizontalAlignment="Left" Height="25" Margin="546,103,0,0" VerticalAlignment="Top" Width="172"/>
                     <GroupBox x:Name="groupBox2_Copy" Header="Work " HorizontalAlignment="Left" Height="310" Margin="10,174,0,0" VerticalAlignment="Top" Width="337" BorderBrush="#FF9F9F9F" FontWeight="Bold"/>
                     <Label x:Name="lblJobTitle" Content="Job Title" HorizontalAlignment="Left" Height="32" Margin="19,231,0,0" VerticalAlignment="Top" Width="125"/>
-                    <ComboBox x:Name="comboBoxJobTitle" HorizontalAlignment="Left" Height="25" Margin="149,231,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboBoxJobTitle" HorizontalAlignment="Left" Height="25" Margin="149,231,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxJobTitle_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Male" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Female" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
                     </ComboBox>
                     <Label x:Name="lblDepartment" Content="Department" HorizontalAlignment="Left" Height="32" Margin="19,264,0,0" VerticalAlignment="Top" Width="125"/>
-                    <ComboBox x:Name="comboBoxDepartment"  HorizontalAlignment="Left" Height="25" Margin="149,264,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboBoxDepartment"  HorizontalAlignment="Left" Height="25" Margin="149,264,0,0" VerticalAlignment="Top" Width="172"  Loaded="ComboBoxDepartment_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Active" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Deactive" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
-
                     </ComboBox>
                     <Label x:Name="lblUnit" Content="Unit" HorizontalAlignment="Left" Height="32" Margin="19,297,0,0" VerticalAlignment="Top" Width="125"/>
-                    <ComboBox x:Name="comboBoxUnit"  HorizontalAlignment="Left" Height="25" Margin="149,297,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboBoxUnit"  HorizontalAlignment="Left" Height="25" Margin="149,297,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxUnit_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Active" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Deactive" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
-
                     </ComboBox>
                     <Label x:Name="lblShift" Content="Shift" HorizontalAlignment="Left" Height="25" Margin="19,330,0,0" VerticalAlignment="Top" Width="125"/>
-                    <ComboBox x:Name="comboBoxShift"  HorizontalAlignment="Left" Height="25" Margin="149,330,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboBoxShift"  HorizontalAlignment="Left" Height="25" Margin="149,330,0,0" VerticalAlignment="Top" Width="172"  Loaded="ComboBoxShift_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Active" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Deactive" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
-
                     </ComboBox>
                     <Label x:Name="lblHours" Content="Hours" HorizontalAlignment="Left" Height="25" Margin="19,363,0,0" VerticalAlignment="Top" Width="125"/>
-                    <ComboBox x:Name="comboBoxHours"  HorizontalAlignment="Left" Height="25" Margin="149,363,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboBoxHours"  HorizontalAlignment="Left" Height="25" Margin="149,363,0,0" VerticalAlignment="Top" Width="172"  Loaded="ComboBoxHours_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Active" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Deactive" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
-
                     </ComboBox>
                     <Label x:Name="lblTimecardNo" Content="Timecard No" HorizontalAlignment="Left" Height="25" Margin="19,198,0,0" VerticalAlignment="Top" Width="125"/>
                     <TextBox x:Name="txtTimecardNo" HorizontalAlignment="Left" Height="25" Margin="149,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
@@ -309,7 +279,7 @@
                     <Label x:Name="lblAccountNo" Content="Account No" HorizontalAlignment="Left" Height="25" Margin="403,263,0,0" VerticalAlignment="Top" Width="119"/>
                     <TextBox x:Name="txtAccountNo" HorizontalAlignment="Left" Height="25" Margin="547,264,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"/>
                     <Label x:Name="lblAccountName" Content="Account Name" HorizontalAlignment="Left" Height="25" Margin="404,297,0,0" VerticalAlignment="Top" Width="118"/>
-                    <ComboBox x:Name="comboBoxAccountName"  HorizontalAlignment="Left" Height="25" Margin="548,297,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboBoxAccountName"  HorizontalAlignment="Left" Height="25" Margin="548,297,0,0" VerticalAlignment="Top" Width="172"  Loaded="ComboBoxAccountName_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -318,7 +288,7 @@
                         </ComboBox.Background>
                     </ComboBox>
                     <Label x:Name="lblSortCode" Content="Sort Code" HorizontalAlignment="Left" Height="25" Margin="403,330,0,0" VerticalAlignment="Top" Width="119"/>
-                    <ComboBox x:Name="comboBoxSortCode"  HorizontalAlignment="Left" Height="25" Margin="547,330,0,0" VerticalAlignment="Top" Width="172" RenderTransformOrigin="0.538,-0.536">
+                    <ComboBox x:Name="comboBoxSortCode"  HorizontalAlignment="Left" Height="25" Margin="547,330,0,0" VerticalAlignment="Top" Width="172" RenderTransformOrigin="0.538,-0.536" Loaded="ComboBoxSortCode_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -328,37 +298,26 @@
 
                     </ComboBox>
                     <Label x:Name="lblPayFrequency" Content="Pay Frequency" HorizontalAlignment="Left" Height="32" Margin="404,401,0,0" VerticalAlignment="Top" Width="102"/>
-                    <ComboBox x:Name="comboBoxPayFrequency" HorizontalAlignment="Left" Height="25" Margin="548,401,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboBoxPayFrequency" HorizontalAlignment="Left" Height="25" Margin="548,401,0,0" VerticalAlignment="Top" Width="172" Loaded="ComboBoxPayFrequency_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Male" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Female" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
                     </ComboBox>
                     <Label x:Name="lblPaymentMethod" Content="Payment Method" HorizontalAlignment="Left" Height="32" Margin="404,438,0,0" VerticalAlignment="Top" Width="120"/>
-                    <ComboBox x:Name="comboBoxPaymentMethod"  HorizontalAlignment="Left" Height="25" Margin="548,438,0,0" VerticalAlignment="Top" Width="172">
+                    <ComboBox x:Name="comboBoxPaymentMethod"  HorizontalAlignment="Left" Height="25" Margin="548,438,0,0" VerticalAlignment="Top" Width="172"  Loaded="ComboBoxPaymentMethod_Loaded">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
                                 <GradientStop Color="#FFE6EEF7" Offset="1"/>
                             </LinearGradientBrush>
                         </ComboBox.Background>
-                        <ComboBoxItem Content="Active" Background="WhiteSmoke" HorizontalAlignment="Left" Width="169.6"/>
-                        <ComboBoxItem Content="Deactive" Background="LightGray" HorizontalAlignment="Left" Width="169.6"/>
-
                     </ComboBox>
                     <GroupBox x:Name="groupBox_Copy3" Header="Payment" HorizontalAlignment="Left" Height="108" Margin="392,376,0,0" VerticalAlignment="Top" Width="365" BorderBrush="#FF9F9F9F" FontWeight="Bold" d:IsLocked="True"/>
-                    <Button x:Name="btnSave_Copy1" Content="Save" HorizontalAlignment="Left" Height="30" Margin="607,498,0,0" VerticalAlignment="Top" Width="75 "/>
-                    <Button x:Name="btnEdit_Copy1" Content="Edit" HorizontalAlignment="Left" Height="30" Margin="527,498,0,0" VerticalAlignment="Top" Width="75 "/>
-                    <Button x:Name="btnPrint_Copy1" Content="Print" HorizontalAlignment="Left" Height="30" Margin="687,498,0,0" VerticalAlignment="Top" Width="75 "/>
-                    <Button x:Name="btnNext_Copy1" Content="&gt;" HorizontalAlignment="Left" Height="30" Margin="94,499,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnFirst_Copy1" Content="First" HorizontalAlignment="Left" Height="30" Margin="14,499,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnPrevious_Copy1" Content="Pre" HorizontalAlignment="Left" Height="30" Margin="54,499,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnLast_Copy1" Content="&gt;&gt;" HorizontalAlignment="Left" Height="30" Margin="134,499,0,0" VerticalAlignment="Top" Width="35"/>
-                    <Button x:Name="btnDelete_Copy1" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="447,498,0,0" VerticalAlignment="Top" Width="75 "/>
+                    <Button x:Name="btnAddEmployeeRecruitmentInfo" Content="Add" HorizontalAlignment="Left" Height="30" Margin="685,501,0,0" VerticalAlignment="Top" Width="75"  Grid.Column="2" Click="BtnAddEmployeeRecruitmentInfo_Click"/>
+                    <Button x:Name="btnUpdateEmployeeRecruitmentInfo" Content="Save" HorizontalAlignment="Left" Height="30" Margin="685,501,0,0" VerticalAlignment="Top" Width="75 " IsEnabled="False" Visibility="Hidden" Click="BtnUpdateEmployeeRecruitmentInfo_Click"/>
                 </Grid>
             </TabItem>
 

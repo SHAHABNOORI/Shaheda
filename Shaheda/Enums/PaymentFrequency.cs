@@ -1,6 +1,6 @@
 ﻿namespace Shaheda.Enums
 {
-    public enum EmployeeContactType
+    public enum PaymentFrequency
     {
         One,Two,Three,Four
     }

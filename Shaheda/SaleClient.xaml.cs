@@ -292,8 +292,10 @@ namespace Shaheda
             txtNickname.Text = _filteredClient.NickName;
 
             comboOrigin.SelectedItem = GetComboItem(comboOrigin, _filteredClient.Origin.Id);
-
-            image1.Source = ByteToImageConverter.ToImage(_filteredClient.Photo);
+            if (_filteredClient.Photo != null)
+            {
+                image1.Source = ByteToImageConverter.ToImage(_filteredClient.Photo);
+            }
             ClientBaseInfoUpdateMode();
             dobSelector.SelectedDate = _filteredClient.Dob;
 

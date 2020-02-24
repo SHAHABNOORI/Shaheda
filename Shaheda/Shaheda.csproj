@@ -14,6 +14,22 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Shahab\Desktop\FileMakerWpf\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +49,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2C7CCA4A2519AC95553E097B784AB14F04E6AEBA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Shaheda_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Windows.Shell, Version=3.5.41019.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -84,35 +112,59 @@
     <Compile Include="Commands\Modules\Clients\UpdateClientBaseInfoCommand.cs" />
     <Compile Include="Commands\Modules\Clients\UpdateClientContactInfoCommand.cs" />
     <Compile Include="Commands\Modules\Clients\UpdateClientPurchaceInfoCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\CreateEmployeeContactInfoCommand.cs" />
     <Compile Include="Commands\Modules\Employees\CreateEmployeePersonalInfoCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\CreateEmployeeRecruitmentInfoCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\EmployeeAddressInfoCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\EmployeeBankInfoCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\EmployeeContactInfoCommand.cs" />
     <Compile Include="Commands\Modules\Employees\EmployeeDegreeCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\EmployeeEmergencyContactInfoCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\EmployeePaymentCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\EmployeeRecruitmentCommand.cs" />
     <Compile Include="Commands\Modules\Employees\EmployeeSkillCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\EmployeeWorkCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\UpdateEmployeeContactInfoCommand.cs" />
     <Compile Include="Commands\Modules\Employees\UpdateEmployeePersonalInfoCommand.cs" />
+    <Compile Include="Commands\Modules\Employees\UpdateEmployeeRecruitmentInfoCommand.cs" />
     <Compile Include="Commands\Modules\Languages\CreateLanguageCommand.cs" />
     <Compile Include="Commands\Modules\Languages\UpdateLanguageCommand.cs" />
     <Compile Include="Commands\Modules\Origins\CreateOriginCommand.cs" />
     <Compile Include="Commands\Modules\Origins\UpdateOriginCommand.cs" />
     <Compile Include="CustomeComboboxItem.cs" />
     <Compile Include="EnumMatchToBooleanConverter.cs" />
+    <Compile Include="Enums\AccountName.cs" />
     <Compile Include="Enums\City.cs" />
     <Compile Include="Enums\ClientContactType.cs" />
     <Compile Include="Enums\ClientRelation.cs" />
     <Compile Include="Enums\ClientCategory.cs" />
     <Compile Include="Enums\ClientSalesman.cs" />
     <Compile Include="Enums\ClientStatus.cs" />
+    <Compile Include="Enums\Department.cs" />
+    <Compile Include="Enums\EmployeeContactType.cs" />
+    <Compile Include="Enums\EmployeeRecruitmentRelationShip.cs" />
+    <Compile Include="Enums\EmployeeRelation.cs" />
     <Compile Include="Enums\EmployeeStatus.cs" />
     <Compile Include="Enums\Gender.cs" />
     <Compile Include="Enums\GpsName.cs" />
+    <Compile Include="Enums\Hour.cs" />
+    <Compile Include="Enums\JobTitle.cs" />
     <Compile Include="Enums\OkToContact.cs" />
     <Compile Include="Enums\OtherReqirments.cs" />
+    <Compile Include="Enums\PaymentFrequency.cs" />
+    <Compile Include="Enums\PaymentMethod.cs" />
     <Compile Include="Enums\ReferralBy.cs" />
     <Compile Include="Enums\ReferralFor.cs" />
     <Compile Include="Enums\ResultType.cs" />
     <Compile Include="Enums\SelectedTab.cs" />
     <Compile Include="Enums\SexualOrientation.cs" />
+    <Compile Include="Enums\Shift.cs" />
+    <Compile Include="Enums\SortCode.cs" />
     <Compile Include="Enums\Therapist.cs" />
     <Compile Include="Enums\Titles.cs" />
     <Compile Include="Enums\Town.cs" />
+    <Compile Include="Enums\TypeOfEmployment.cs" />
+    <Compile Include="Enums\Unit.cs" />
     <Compile Include="Helpers\ByteToImageConverterHelper.cs" />
     <Compile Include="Helpers\RequestHelper.cs" />
     <Compile Include="Premission.xaml.cs">
@@ -158,7 +210,14 @@
     <Compile Include="ViewModels\Clients\ClientPurchaseViewModel.cs" />
     <Compile Include="ViewModels\Degrees\DegreeViewModel.cs" />
     <Compile Include="ViewModels\Educations\EducationViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeAddressInfoViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeBankInfoViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeContactInfoViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeEmergencyContactInfoViewModel.cs" />
     <Compile Include="ViewModels\Employees\EmployeeInfoViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeePaymentViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeRecruitmentViewModel.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeWorkViewModel.cs" />
     <Compile Include="ViewModels\Languages\LanguageViewModel.cs" />
     <Compile Include="ViewModels\Origins\OriginViewModel.cs" />
     <Compile Include="ViewModels\Skills\SkillViewModel.cs" />
@@ -255,6 +314,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Shaheda_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -269,6 +329,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\89.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
